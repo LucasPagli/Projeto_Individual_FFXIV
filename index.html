@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topnav sticky" id="myTopnav">
+  <img src="./FF_Logo.png" alt="Logo">
+  <a href="#home" onclick="HomeScroll()"> <div class="skewed">Home</div> </a>
+  <a href="#personagens" onclick="PersonagensScroll()"> <div class="skewed">Personagens</div> </a>
+  <a href="#expansoes" onclick="ExpansoesScroll()"> <div class="skewed">Expansões</div> </a>
+  <a href="#classes" onclick="ClassesScroll()"> <div class="skewed">Classes</div> </a>
+  <a href="#musicas" onclick="SlideScroll()"> <div class="skewed">Músicas</div> </a>
+
+  <a href="#login" class="nav-right"> <div class="skewed">Login</div> </a>
+  <a href="#cadastro" class="nav-right active"> <div class="skewed">Cadastro</div> </a>
+
+  <a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<main>
+<div class="bgimg-1" id="home_scroll">
+  <div class="caption">
+  <span class="title">BEM-VINDO A FINAL FANTASY XIV</span> <br>
+  <span class="sub_title">Aventura te aguarda além do horizonte em Eorzea</span>
+  </div>
+</div>
+
+<div class="char_info">
+  <span class="char_title">Conheça seus companheiros</span>
+  <p class="char_text">Estes personagens irão ser seus <span class="destaque">principais aliados</span> pelas árduas jornadas à frente, conheça um pouco mais sobre estes bravos <span class="destaque">guerreiros da luz</span> que estarão ao seu lado até nas noites mais escuras e desesperadoras! Além disso, tente <span class="destaque">selecionar até 3 de seus heróis favoritos para te acompanharem</span> ao escutar as belas músicas deste mundo!</p>
+</div>
+
+<div class="bgimg-2" id="personagens_scroll">
+  <div class="caption">
+  <span></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Yipee.</p>
+  </div>
+</div>
+
+<div class="bgimg-3" id="expansoes_scroll">
+  <div class="caption">
+  <span></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Wow.</p>
+  </div>
+</div>
+
+<div class="bgimg-1" id="classes_scroll">
+  <div class="caption">
+  <span class="border">COOL!</span>
+  </div>
+</div>
+</main>
+
+
+</body>
+</html>
+
+<script>
+    function myResponsiveFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav sticky") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav sticky";
+      }
+    }
+
+    function HomeScroll() {
+      document.getElementById("home_scroll").scrollIntoView({behavior: "smooth"});
+    }
+
+    function PersonagensScroll() {
+      document.getElementById("personagens_scroll").scrollIntoView({behavior: "smooth"});
+    }
+
+    function ExpansoesScroll() {
+      document.getElementById("expansoes_scroll").scrollIntoView({behavior: "smooth"});
+    }
+
+    function ClassesScroll() {
+      document.getElementById("classes_scroll").scrollIntoView({behavior: "smooth"});
+    }
+
+    function FooterScroll() {
+      document.getElementById("footer_scroll").scrollIntoView({behavior: "smooth"});
+    }
+</script>
