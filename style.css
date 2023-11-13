@@ -121,12 +121,20 @@
     .topnav a.active {
       border-bottom-width: 5px;
     }
+    .caption span.title, .caption span.sub_title {
+      text-shadow: 5px 5px 5px rgb(43, 146, 230) !important;
+    }
     .caption span.sub_title {
       font-size: 8vw !important;
     }
     .mini_portrait, .mini_portrait_nd {
       height: 9vh !important;
       margin-right: 5px;
+    }
+    .char_intro {
+      max-width: 70vw;
+      left: 25% !important;
+      top: 5% !important;
     }
   }
 
@@ -149,6 +157,9 @@
     }
     .char_intro {
       width: 80vw !important;
+    }
+    .char_nome {
+      top: 3% !important;
     }
   }
 
@@ -224,37 +235,11 @@
   .section_text_light {
     text-align:center;
     letter-spacing: 10px;
-    font-size: 2.4vw;
+    font-size: 2em;
   }
 
   .section_text_light .destaque_light {
-    text-shadow: 0px 5px 5px rgb(78,160,228);
-  }
-
-  .section_title_dark {
-    text-align:center;
-    letter-spacing: 10px;
-    font-size: 4.5vw;
-    text-shadow: 0px 5px 5px black;
-  }
-
-  .section_info_dark {
-    color: white;
-    background-color:#1a1e22;
-    text-align:center;
-    padding:50px 80px;
-  }
-
-  .section_text_dark {
-    text-align:center;
-    letter-spacing: 10px;
-    font-size: 2.4vw;
-    text-shadow: 5px 5px 5px black;
-  }
-
-  .section_text_dark .destaque_dark {
-    color: black;
-    text-shadow: 0px 5px 5px rgb(183,48,48);
+    text-shadow: 0px 5px 5px rgb(43, 146, 230);
   }
 
   /* Personagens */
@@ -270,10 +255,10 @@
   writing-mode: vertical-rl;
   text-orientation: mixed;
   position: absolute;
-  top: 7%;
+  top: 12%;
   color: #fff;
   text-shadow: 5px 5px 5px black;
-  font-size: 7.5vw;
+  font-size: 4.5em;
   letter-spacing: 10px;
   }
 
@@ -294,6 +279,7 @@
     border-width: 5px;
     border-color: #fff;
     overflow: scroll;
+    overflow-x: hidden;
     display: block;
   }
 
@@ -331,7 +317,7 @@
     height: 9vh;
     width: 5vw;
     position: relative;
-    top: 78vh;
+    top: 77.5vh;
     left: 2.5%;
     cursor: pointer;
   }
@@ -344,7 +330,7 @@
     height: 9vh;
     width: 5vw;
     position: relative;
-    top: 78.2vh;
+    top: 77.7vh;
     left: 2.5%;
     cursor: pointer;
   }
@@ -445,4 +431,26 @@
     .modal-content {
       width: 100%;
     }
+  }
+
+/* Scrollbar */
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
