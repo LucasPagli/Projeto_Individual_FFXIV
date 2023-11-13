@@ -31,26 +31,54 @@
   </div>
 </div>
 
-<div class="char_info">
-  <span class="char_title">Conheça seus companheiros</span>
-  <p class="char_text">Estes personagens irão ser seus <span class="destaque">principais aliados</span> pelas árduas jornadas à frente, conheça um pouco mais sobre estes bravos <span class="destaque">guerreiros da luz</span> que estarão ao seu lado até nas noites mais escuras e desesperadoras! Além disso, tente <span class="destaque">selecionar até 3 de seus heróis favoritos para te acompanharem</span> ao escutar as belas músicas deste mundo!</p>
+<div class="section_info_light">
+  <span class="section_title_light">Conheça seus companheiros!</span>
+  <p class="section_text_light">
+    Estes personagens irão ser seus <span class="destaque_light">principais aliados</span> pelas árduas jornadas à frente, conheça um pouco mais sobre estes bravos <span class="destaque_light">guerreiros da luz</span> que estarão ao seu lado até nas noites mais escuras e desesperadoras! Além disso, se <span class="destaque_light">cadastre para selecionar até 3 de seus heróis favoritos para te acompanharem</span> ao escutar as belas músicas deste mundo!</p>
 </div>
 
 <div class="bgimg-2" id="personagens_scroll">
-  <div class="caption">
-  <span></span>
+  <div class="char_nome">Warrior of Light</div>
+  <div class="char_intro">
+  <span>O Guerreiro da Luz, também conhecido como Aventureiro, é o personagem criado pelo jogador em Final Fantasy XIV que atua como protagonista. Warrior of Light é um termo recorrente na série Final Fantasy desde o Final Fantasy original, referindo-se ao personagem do jogador.
+
+    O personagem do jogador é um aventureiro em Eorzea durante a Sétima Era Umbral que se junta a uma das três Grandes Companhias e se torna um membro-chave dos Scions of the Seventh Dawn. O Guerreiro da Luz pode ser uma das oito raças principais de Eorzea: Hyur, Miqo'te, Roegadyn, Lalafell, Elezen, Au Ra, Viera ou Hrothgar. Nas cenas em CG e na maioria dos trailers do jogo, um jovem Midlander Hyur representa o Guerreiro da Luz.</span>
   </div>
+
+  <div class="portraits">
+    <div class="mini_portrait"><img src="imagens/WoL_portrait.jpg"></div>
+    <div class="mini_portrait"><img src="imagens/Thancred.jpg"></div>
+    <div class="mini_portrait"><img src="imagens/Y'shtola.jpg"></div>
+    <div class="mini_portrait"><img src="imagens/Urianger.jpg"></div>
+    <div class="mini_portrait"><img src="imagens/Alisae.jpg"></div>
+    <div class="mini_portrait"><img src="imagens/Alphinaud.jpg"></div>
+  
+    <div class="mini_portrait_nd"><img src="imagens/G'raha_tia.jpg"></div>
+    <div class="mini_portrait_nd"><img src="imagens/Estinien_portrait.png"></div>
+    <div class="mini_portrait_nd"><img src="imagens/Tataru_portrait.jpg"></div>
+    <div class="mini_portrait_nd"><img src="imagens/Krile_portrait.jpg"></div>
+    <div class="mini_portrait_nd"><img src="imagens/Moenbryda.jpg"></div>
+    <div class="mini_portrait_nd"><img src="imagens/Minfilia_portrait.jpg"></div>
+  </div>
+
+  <div class="big_portrait"><img src="imagens/WoL_big.png"></div>
 </div>
 
-<div style="position:relative;">
-  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Yipee.</p>
-  </div>
+<div class="section_info_dark">
+  <span class="section_title_dark">Expansões aclamadas e premiadas!</span>
+  <p class="section_text_dark">Final Fantasy XIV possui <span class="destaque_dark">5 expansões</span> lançadas ao passar de 10 anos contando a <span class="destaque_dark">épica jornada de Hydaelyn e Zodiark</span>, o conflito entre luz e escuridão, e como o seu Guerreiro da Luz, o escolhido de Hydaelyn, mantém a chama da esperança viva enquanto <span class="destaque_dark">defende Eorzea</span> de inúmeras ameaças! As expansões conseguem contar <span class="destaque_dark">histórias ricas</span> de detalhes que se interligam na grande narrativa do jogo, enquanto você <span class="destaque_dark">explora</span> novas regiões e conhece seus residentes.</p>
 </div>
 
 <div class="bgimg-3" id="expansoes_scroll">
   <div class="caption">
-  <span></span>
+    <img id="myImg" src="imagens/EW_center.jpeg" alt="Northern Lights, Norway" width="300" height="200">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
   </div>
 </div>
 
@@ -79,6 +107,27 @@
       } else {
         x.className = "topnav sticky";
       }
+    }
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
     }
 
     function HomeScroll() {

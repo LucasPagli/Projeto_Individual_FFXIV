@@ -11,6 +11,8 @@
     margin: 0;
     height: 100%;
   }
+
+  /* Navbar */
   
   .topnav {
     overflow: hidden;
@@ -48,7 +50,7 @@
   }
   
   .topnav a.active {
-    border-color: rgba(183,48,48,255);
+    border-color: rgb(183,48,48);
     border-style: double;
     border-width: 5px;
     border-top-width: 0;
@@ -76,6 +78,8 @@
     top: 0;
     width: 100%;
   }
+
+  /* Responsividade */
   
   @media screen and (max-width: 712px) {
     .topnav a:not(:first-child) {display: none;}
@@ -98,7 +102,7 @@
       display: block;
       text-align: left;
       margin-left: 70px;
-      border-color: rgba(183,48,48,255);
+      border-color: rgb(183,48,48);
       border-style: inset;
       border-width: 5px;
       border-top-width: 0px;
@@ -120,7 +124,35 @@
     .caption span.sub_title {
       font-size: 8vw !important;
     }
+    .mini_portrait, .mini_portrait_nd {
+      height: 9vh !important;
+      margin-right: 5px;
+    }
   }
+
+  @media screen and (max-width: 1165px) {
+    .portraits {
+      width: 84vw !important;
+    }
+    .mini_portrait {
+      top: 72vh !important;
+      width: 10vw !important;
+      height: 10vh !important;
+    }
+    .mini_portrait_nd {
+      top: 72.2vh !important;
+      width: 10vw !important;
+      height: 10vh !important;
+    }
+    .big_portrait img {
+      display: none;
+    }
+    .char_intro {
+      width: 80vw !important;
+    }
+  }
+
+  /* Parallax */
 
   .bgimg-1, .bgimg-2, .bgimg-3 {
     position: relative;
@@ -130,20 +162,6 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .bgimg-1 {
-    background-image: url("Home_bg.jpg");
-    min-height: 100vh;
-  }
-  
-  .bgimg-2 {
-    background-image: url("Sharlayan_bg.png");
-    min-height: 100vh;
-  }
-  
-  .bgimg-3 {
-    background-image: url("https://api.time.com/wp-content/uploads/2015/04/ff14-concept-art-02.jpg");
-    min-height: 100vh;
-  }
 
   /* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1024px) {
@@ -152,6 +170,8 @@
     }
   }
   
+  /* Caption inicial */
+
   .caption {
     position: absolute;
     left: 0;
@@ -161,6 +181,14 @@
     color: #000;
   }
   
+
+  /* Home */
+
+  .bgimg-1 {
+    background-image: url("Home_bg.jpg");
+    min-height: 100vh;
+  }
+
   .caption span.title {
     color: #fff;
     text-shadow: 5px 5px 5px black;
@@ -176,27 +204,245 @@
     font-size: 4vw;
     letter-spacing: 10px;
   }
-  
-  .char_title {
+
+  /* Intro sections light and dark */
+
+  .section_title_light {
     text-align:center;
     letter-spacing: 10px;
     font-size: 4.5vw;
     text-shadow: 5px 5px 5px grey;
   }
 
-  .char_info {
+  .section_info_light {
     color: black;
     background-color:white;
     text-align:center;
     padding:50px 80px;
   }
 
-  .char_text {
+  .section_text_light {
     text-align:center;
     letter-spacing: 10px;
     font-size: 2.4vw;
   }
 
-  .char_text .destaque {
+  .section_text_light .destaque_light {
     text-shadow: 0px 5px 5px rgb(78,160,228);
+  }
+
+  .section_title_dark {
+    text-align:center;
+    letter-spacing: 10px;
+    font-size: 4.5vw;
+    text-shadow: 0px 5px 5px black;
+  }
+
+  .section_info_dark {
+    color: white;
+    background-color:#1a1e22;
+    text-align:center;
+    padding:50px 80px;
+  }
+
+  .section_text_dark {
+    text-align:center;
+    letter-spacing: 10px;
+    font-size: 2.4vw;
+    text-shadow: 5px 5px 5px black;
+  }
+
+  .section_text_dark .destaque_dark {
+    color: black;
+    text-shadow: 0px 5px 5px rgb(183,48,48);
+  }
+
+  /* Personagens */
+
+  .bgimg-2 {
+    background-image: url("imagens/mothercrystal.jpg");
+    min-height: 100vh;
+    opacity: 1;
+    display: flex;
+  }
+
+  .char_nome{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  top: 7%;
+  color: #fff;
+  text-shadow: 5px 5px 5px black;
+  font-size: 7.5vw;
+  letter-spacing: 10px;
+  }
+
+  .char_intro {
+    background-color: rgb(0,0,0,0.7);
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    height: fit-content;
+    max-height: 60vh;
+    color: #fff;
+    text-shadow: 1px 3px 3px rgb(43, 146, 230);
+    font-size: 2em;
+    letter-spacing: 5px;
+    width: 50vw;
+    word-wrap: break-word;
+    border-style: groove;
+    border-width: 5px;
+    border-color: #fff;
+    overflow: scroll;
+    display: block;
+  }
+
+  .char_intro span {
+    margin: 25px;
+    display: block;
+  }
+
+  .big_portrait {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .big_portrait img{
+    height: 100vh;
+  }
+
+  .portraits {
+    display: flex;
+    height: 10vh;
+    width: 40vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: absolute;
+  }
+
+  .mini_portrait {
+    border-color: rgb(78,160,228);
+    border-style: groove;
+    border-width: 5px;
+    overflow: hidden;
+    height: 9vh;
+    width: 5vw;
+    position: relative;
+    top: 78vh;
+    left: 2.5%;
+    cursor: pointer;
+  }
+
+  .mini_portrait_nd {
+    border-color: rgb(78,160,228);
+    border-style: groove;
+    border-width: 5px;
+    overflow: hidden;
+    height: 9vh;
+    width: 5vw;
+    position: relative;
+    top: 78.2vh;
+    left: 2.5%;
+    cursor: pointer;
+  }
+
+  .portraits .mini_portrait img, .portraits .mini_portrait_nd img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+  }
+
+  .portraits .mini_portrait img:hover, .portraits .mini_portrait_nd img:hover {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  /* Expansões */
+  
+  .bgimg-3 {
+    background-image: url("imagens/EW_center.jpeg");
+    min-height: 100vh;
+    opacity: 0.95;
+  }
+
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 70px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
   }
