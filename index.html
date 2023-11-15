@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
+<script src="personagens.js"></script>
 </head>
 <body>
 
@@ -38,30 +39,30 @@
 </div>
 
 <div class="bgimg-2" id="personagens_scroll">
-  <div class="char_nome">Warrior of Light</div>
-  <div class="char_intro">
+  <div class="char_nome" id="nome_hero">Warrior of Light</div>
+  <div class="char_intro" id="intro_hero">
   <span>O Guerreiro da Luz, também conhecido como Aventureiro, é o personagem criado pelo jogador em Final Fantasy XIV que atua como protagonista. Warrior of Light é um termo recorrente na série Final Fantasy desde o Final Fantasy original, referindo-se ao personagem do jogador.
 
     O personagem do jogador é um aventureiro em Eorzea durante a Sétima Era Umbral que se junta a uma das três Grandes Companhias e se torna um membro-chave dos Scions of the Seventh Dawn. O Guerreiro da Luz pode ser uma das oito raças principais de Eorzea: Hyur, Miqo'te, Roegadyn, Lalafell, Elezen, Au Ra, Viera ou Hrothgar. Nas cenas em CG e na maioria dos trailers do jogo, um jovem Midlander Hyur representa o Guerreiro da Luz.</span>
   </div>
 
   <div class="portraits">
-    <div class="mini_portrait"><img src="imagens/WoL_portrait.jpg"></div>
-    <div class="mini_portrait"><img src="imagens/Thancred.jpg"></div>
-    <div class="mini_portrait"><img src="imagens/Y'shtola.jpg"></div>
-    <div class="mini_portrait"><img src="imagens/Urianger.jpg"></div>
-    <div class="mini_portrait"><img src="imagens/Alisae.jpg"></div>
-    <div class="mini_portrait"><img src="imagens/Alphinaud.jpg"></div>
+    <div class="mini_portrait"> <img src="imagens/WoL_portrait.jpg" onclick="WoL()"></div>
+    <div class="mini_portrait"> <img src="imagens/Thancred.jpg" onclick="Thancred()"></div>
+    <div class="mini_portrait"> <img src="imagens/Y'shtola.jpg" onclick="Yshtola()"></div>
+    <div class="mini_portrait"> <img src="imagens/Urianger.jpg" onclick="Urianger()"></div>
+    <div class="mini_portrait"> <img src="imagens/Alisae.jpg" onclick="Alisae()"></div>
+    <div class="mini_portrait"> <img src="imagens/Alphinaud.jpg" onclick="Alphinaud()"></div>
   
-    <div class="mini_portrait_nd"><img src="imagens/G'raha_tia.jpg"></div>
-    <div class="mini_portrait_nd"><img src="imagens/Estinien_portrait.png"></div>
-    <div class="mini_portrait_nd"><img src="imagens/Tataru_portrait.jpg"></div>
-    <div class="mini_portrait_nd"><img src="imagens/Krile_portrait.jpg"></div>
-    <div class="mini_portrait_nd"><img src="imagens/Moenbryda.jpg"></div>
-    <div class="mini_portrait_nd"><img src="imagens/Minfilia_portrait.jpg"></div>
+    <div class="mini_portrait_nd"> <img src="imagens/G'raha_tia.jpg" onclick="Graha()"></div>
+    <div class="mini_portrait_nd"> <img src="imagens/Estinien_portrait.png" onclick="Estinien()"></div>
+    <div class="mini_portrait_nd"> <img src="imagens/Tataru_portrait.jpg" onclick="Tataru()"></div>
+    <div class="mini_portrait_nd"> <img src="imagens/Krile_portrait.jpg" onclick="Krile()"></div>
+    <div class="mini_portrait_nd"> <img src="imagens/Moenbryda.jpg" onclick="Moenbryda()"></div>
+    <div class="mini_portrait_nd"> <img src="imagens/Minfilia_portrait.jpg" onclick="Minfilia()"></div>
   </div>
 
-  <div class="big_portrait"><img src="imagens/WoL_big.png"></div>
+  <div class="big_portrait" id="img_hero"><img src="imagens/WoL_big.png"></div>
 </div>
 
 <div class="section_info_light">
@@ -100,6 +101,11 @@
 </html>
 
 <script>
+  
+    var ch = document.querySelector('.char_nome');
+    var ci = document.querySelector('.char_intro');
+    var bp = document.querySelector('.big_portrait');
+
     function myResponsiveFunction() {
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav sticky") {

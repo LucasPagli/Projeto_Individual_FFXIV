@@ -219,7 +219,7 @@
   .section_title_light {
     text-align:center;
     letter-spacing: 10px;
-    font-size: 4.5vw;
+    font-size: 4.5em;
     text-shadow: 5px 5px 5px grey;
   }
 
@@ -337,13 +337,60 @@
     height: 100%;
     width: 100%;
     opacity: 0.7;
+    cursor: pointer;
   }
 
   .portraits .mini_portrait img:hover, .portraits .mini_portrait_nd img:hover {
     opacity: 1;
     transition: 0.5s;
+    cursor: pointer;
   }
 
+  .slide {
+    left: -100px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 0.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @-webkit-keyframes slide {
+    100% { left: 0; }
+  }
+
+  @keyframes slide {
+      100% { left: 0; }
+  }
+
+  .slide_intro {
+    left: -100%;
+    -webkit-animation: slide_intro 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide_intro 0.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @-webkit-keyframes slide_intro {
+    100% { left: 15%; }
+  }
+
+  @keyframes slide_intro {
+      100% { left: 15%; }
+  }
+
+  .slide_big {
+    animation: fadeIn 3s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-webkit-keyframes slide_intro {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
   /* Expansões */
   
   .bgimg-3 {
