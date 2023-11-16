@@ -68,9 +68,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Urianger Augurelt`;
+      nome_hero.innerHTML = `Urianger`;
 
-      intro_hero.innerHTML = `<span>Classe: Astrologian (Healer) <br> Urianger costuma falar em poesia e enigmas. Ele é bem versado na profecia que aponta para a Sétima Era Umbral e recita um versículo em quase todos os encontros. Embora sua aparência e maneirismos sejam intimidantes, ele é virtuoso. Embora tente esconder isso atrás de uma fachada séria, ele é próximo do companheiro Scion Moenbryda, conhecendo-a desde a infância. Embora reservado, Urianger é leal a seus companheiros Scions e a seu professor, Louisoix Leveilleur.
+      intro_hero.innerHTML = `<span>Classe: Astrologian (Healer) <br> Urianger Augurelt costuma falar em poesia e enigmas. Ele é bem versado na profecia que aponta para a Sétima Era Umbral e recita um versículo em quase todos os encontros. Embora sua aparência e maneirismos sejam intimidantes, ele é virtuoso. Embora tente esconder isso atrás de uma fachada séria, ele é próximo do companheiro Scion Moenbryda, conhecendo-a desde a infância. Embora reservado, Urianger é leal a seus companheiros Scions e a seu professor, Louisoix Leveilleur.
       <br>
       Dói-lhe enganar seus amigos ou ocultar-lhes informações, mas ele segue com suas convicções, pois elas são para um bem maior. Quando tudo for revelado, Urianger não dá desculpas e deseja humildemente o perdão e a compreensão dos seus companheiros.</span>`;
 
@@ -86,9 +86,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Alisaie Leveilleur`;
+      nome_hero.innerHTML = `Alisaie`;
 
-      intro_hero.innerHTML = `<span>Classe: Red Mage (DPS) <br> Alisaie é obstinada, cínica e, às vezes, emotiva. Ela é compassiva, preocupada com um Koboldling traumatizado que perdeu seus pais e deixando um buquê de flores em memória de seu avô, Nael van Darnus, e dos filhos de Bahamut.
+      intro_hero.innerHTML = `<span>Classe: Red Mage (DPS) <br> Alisaie Leveilleur é obstinada, cínica e, às vezes, emotiva. Ela é compassiva, preocupada com um Koboldling traumatizado que perdeu seus pais e deixando um buquê de flores em memória de seu avô, Nael van Darnus, e dos filhos de Bahamut.
 
       Como ela própria admite, Alphinaud sempre foi a mais inteligente dos dois, embora seja mais direta. Esta distinção é mais pronunciada quando ela invoca uma lâmina etérea para atacar os Guerreiros das Trevas, em vez de invocar um carbúnculo como seu irmão. Ao contrário de seu irmão, Alisaie tinha pouco interesse nos assuntos políticos da cidade-estado, cansada de suas mesquinhas lutas pelo poder. Ela ataca sozinha enquanto seu irmão se junta aos Scions of the Seventh Dawn, mas ao se reunir ela se torna mais envolvida, especialmente com as missões contra os Guerreiros das Trevas e para libertar Doma e Ala Mhigo.
       <br>
@@ -106,9 +106,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Alphinaud Leveilleur`;
+      nome_hero.innerHTML = `Alphinaud`;
 
-      intro_hero.innerHTML = `<span>Classe: Sage (Healer) <br> Alphinaud é um jovem seguro de si, calmo e maduro para a sua idade. Ele mostra mais interesse em intervir nos eventos Eorzeanos do que sua irmã, que prefere observar o desenrolar da história nas sombras. Carismático e diplomático, ele acha fácil ganhar a confiança dos líderes da Aliança Eorzeana, em parte graças ao crédito do seu avô. Alphinaud tem um grande ego e frequentemente entra em conflito com líderes de outras nações sobre os seus ideais. Alphinaud é indiscutivelmente o Scion mais experiente politicamente, ou pelo menos o mais interessado em se envolver em política. Sua habilidade em negociações políticas tem sido útil no avanço da agenda dos Scions.
+      intro_hero.innerHTML = `<span>Classe: Sage (Healer) <br> Alphinaud Leveilleur é um jovem seguro de si, calmo e maduro para a sua idade. Ele mostra mais interesse em intervir nos eventos Eorzeanos do que sua irmã, que prefere observar o desenrolar da história nas sombras. Carismático e diplomático, ele acha fácil ganhar a confiança dos líderes da Aliança Eorzeana, em parte graças ao crédito do seu avô. Alphinaud tem um grande ego e frequentemente entra em conflito com líderes de outras nações sobre os seus ideais. Alphinaud é indiscutivelmente o Scion mais experiente politicamente, ou pelo menos o mais interessado em se envolver em política. Sua habilidade em negociações políticas tem sido útil no avanço da agenda dos Scions.
       <br>
       Inicialmente Alphinaud participa dos assuntos de Eorzea com sua própria agenda: descobrir o que aconteceu com seu avô e terminar o que começou para testar seu potencial e provar seu valor. À medida que ele passa mais tempo com os Scions, ele entende por que seu avô se sacrificou tanto pelo reino e resolve seguir seus passos. Comparado com sua irmã, Alphinaud é mais sensato e consegue superar rapidamente o choque de acontecimentos inesperados e reformular suas estratégias. Ele é mais seletivo em suas batalhas diplomáticas, reconhecendo que depois que seu pai o renegou e a Alisaie, qualquer novo envolvimento pioraria a situação.</span>`;
 
@@ -144,9 +144,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Estinien Varlineau`;
+      nome_hero.innerHTML = `Estinien`;
 
-      intro_hero.innerHTML = `<span>Classe: Dragoon (DPS) <br> Estinien é estóico e fala de maneira brusca. Ele tem pouco respeito por aqueles que considera fracos e mal esconde seu desdém ao falar com eles. Estinien tem a reputação de desprezar reuniões sociais em Ishgard e detesta a ideia de manter as aparências. Ele passou a maior parte de sua vida movido por seu desejo de vingança contra Nidhogg e, portanto, vê pouca necessidade de companheirismo ou hobbies. Ele tem pouco respeito pela liderança zelosa de Ishgard, criticando as suas decisões e a falta de cuidado com os cidadãos. Na maioria das vezes ele guarda essas opiniões para si mesmo, mas é mais aberto a respeito disso com seus amigos e companheiros.
+      intro_hero.innerHTML = `<span>Classe: Dragoon (DPS) <br> Estinien Varlineau é estóico e fala de maneira brusca. Ele tem pouco respeito por aqueles que considera fracos e mal esconde seu desdém ao falar com eles. Estinien tem a reputação de desprezar reuniões sociais em Ishgard e detesta a ideia de manter as aparências. Ele passou a maior parte de sua vida movido por seu desejo de vingança contra Nidhogg e, portanto, vê pouca necessidade de companheirismo ou hobbies. Ele tem pouco respeito pela liderança zelosa de Ishgard, criticando as suas decisões e a falta de cuidado com os cidadãos. Na maioria das vezes ele guarda essas opiniões para si mesmo, mas é mais aberto a respeito disso com seus amigos e companheiros.
       <br>
       Sua personalidade se suaviza após viajar com o Guerreiro da Luz e seus companheiros. Embora sua maneira rude de falar nunca mude, Estinien admite que deixou de ser a vingança como sua única motivação. Embora muitas vezes o insulte, Estinien faz amizade com Alphinaud Leveilleur. Aymeric de Borel sugere que Estinien vê Alphinaud como um reflexo do irmão mais novo que ele perdeu nas chamas de Nidhogg, enquanto Alphinaud vê Estinien como o irmão mais velho que ele gostaria de ter. Estinien respeita o Guerreiro da Luz como um camarada de confiança e fala muito bem de Sor Aymeric, acreditando que ele é a melhor esperança de Ishgard para um novo futuro..</span>`;
 
@@ -180,9 +180,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Krile Mayer Baldesion`;
+      nome_hero.innerHTML = `Krile`;
 
-      intro_hero.innerHTML = `<span>Classe: Conjurer (Healer) <br> Krile é gentil e inteligente e possui grande conhecimento em diversas áreas. Ela pode ler as pessoas e gosta de provocar os outros. Ela traz à tona o passado de Alphinaud Leveilleur para envergonhá-lo, nota a afeição de Thancred Waters por Minfilia, engana Unukalhai para que abandone sua fachada estóica e compara Y'shtola Rhul a seu mestre, Matoya, o que irrita o geralmente calmo Miqo'te. Mesmo assim, Krile se preocupa profundamente com seus amigos, trabalhando incansavelmente para ajudá-los. Ela rapidamente pede desculpas a Thancred e Unukalhai por sua investigação quando eles parecem se ofender, explicando que ela só faz isso para ter uma noção melhor das personalidades e motivações de seus companheiros, para que seja mais fácil confiar neles.
+      intro_hero.innerHTML = `<span>Classe: Conjurer (Healer) <br> Krile Mayer Baldesion é gentil e inteligente e possui grande conhecimento em diversas áreas. Ela pode ler as pessoas e gosta de provocar os outros. Ela traz à tona o passado de Alphinaud Leveilleur para envergonhá-lo, nota a afeição de Thancred Waters por Minfilia, engana Unukalhai para que abandone sua fachada estóica e compara Y'shtola Rhul a seu mestre, Matoya, o que irrita o geralmente calmo Miqo'te. Mesmo assim, Krile se preocupa profundamente com seus amigos, trabalhando incansavelmente para ajudá-los. Ela rapidamente pede desculpas a Thancred e Unukalhai por sua investigação quando eles parecem se ofender, explicando que ela só faz isso para ter uma noção melhor das personalidades e motivações de seus companheiros, para que seja mais fácil confiar neles.
       <br>
       Krile era a mentor de Alphinaud na Academia Sharlayan e, embora ela o provoque, ela pensa nele com carinho e aprova como ele amadureceu, sabendo que ele viria resgatá-la se ela estivesse em perigo. Ela tem muita paciência e cabeça fria, mas em raras ocasiões pode perder a calma e até mesmo o Guerreiro da Luz não está isento de sua repreensão.</span>`;
 
@@ -198,9 +198,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Moenbryda Wilfsunnwyn`;
+      nome_hero.innerHTML = `Moenbryda`;
 
-      intro_hero.innerHTML = `<span>Classe: Marauder (Tank) <br> Moenbryda nasceu em Sharlayan e cresceu fascinada pelo conhecimento que a rodeava e sempre teve vontade de aprender. Sentindo a mesma atração pelo desconhecido, ela procurou fazer amizade com Urianger Augurelt, embora ele ignorasse sua importunação. Ela não desistiu e eventualmente os dois se aproximaram, e eram frequentemente encontrados na Grande Biblioteca Gubal lendo tomos e comendo almôndegas de cockatrice. Quando cresceu, estudou com Louisoix Leveilleur. Depois de desenvolver um talento na pesquisa etérica, ela se tornou uma Arconte e estava no Círculo do Conhecimento, no entanto, Louisoix disse-lhe para ficar em Sharlayan, uma ordem que ela seguiu com grande dificuldade. 
+      intro_hero.innerHTML = `<span>Classe: Marauder (Tank) <br> Moenbryda Wilfsunnwyn nasceu em Sharlayan e cresceu fascinada pelo conhecimento que a rodeava e sempre teve vontade de aprender. Sentindo a mesma atração pelo desconhecido, ela procurou fazer amizade com Urianger Augurelt, embora ele ignorasse sua importunação. Ela não desistiu e eventualmente os dois se aproximaram, e eram frequentemente encontrados na Grande Biblioteca Gubal lendo tomos e comendo almôndegas de cockatrice. Quando cresceu, estudou com Louisoix Leveilleur. Depois de desenvolver um talento na pesquisa etérica, ela se tornou uma Arconte e estava no Círculo do Conhecimento, no entanto, Louisoix disse-lhe para ficar em Sharlayan, uma ordem que ela seguiu com grande dificuldade. 
       <br>
       Moenbryda é uma mulher Seawolf Roegadyn com pele clara e cabelos prateados. Ela tem a tatuagem do Círculo do Saber na coxa esquerda, bem como a marca de um Arconte no pescoço. Ela veste um sobretudo azul com capuz branco e uma saia curta azul e botas de cano alto. Ela carrega um machado Dual Haken. 
       Apesar de sua aparência intimidadora, ela é amigável e extrovertida, tendo uma história com Yda e frequentemente flertando com Urianger.</span>`;
