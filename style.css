@@ -40,6 +40,10 @@
   
   .topnav a:hover {
     background-color: #252525;
+    border-color: rgb(183,48,48);
+    border-style: double;
+    border-width: 5px;
+    border-top-width: 0;
     color: rgb(183,48,48);
     transition: color 0.5s;
   }
@@ -110,7 +114,7 @@
       background-color: #252525;
     }
     .topnav.responsive a:hover {
-      color: rgba(183,48,48,255);
+      color: rgb(183,48,48);
       transition: color 0.5s;
     }
     .skewed {
