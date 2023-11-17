@@ -78,7 +78,7 @@
       <br>
       Dói-lhe enganar seus amigos ou ocultar-lhes informações, mas ele segue com suas convicções, pois elas são para um bem maior. Quando tudo for revelado, Urianger não dá desculpas e deseja humildemente o perdão e a compreensão dos seus companheiros.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/Urianger_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Urianger_big.png" style="margin-right: 100px">`;
     }
 
     function Alisae() {
@@ -98,7 +98,7 @@
       <br>
       Alisaie é a mais pragmática e direta das duas, na maioria das vezes preocupada com as possíveis ramificações de uma missão. Assim como Alphinaud, Alisaie respeita muito o Guerreiro da Luz e é especialmente grata por seu apoio em momentos difíceis. Ela vê os membros principais dos Scions como amigos íntimos e se preocupa muito com seu bem-estar.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/Alisae_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Alisae_big.png" style="margin-right: 100px">`;
     }
 
     function Alphinaud() {
@@ -116,7 +116,7 @@
       <br>
       Inicialmente Alphinaud participa dos assuntos de Eorzea com sua própria agenda: descobrir o que aconteceu com seu avô e terminar o que começou para testar seu potencial e provar seu valor. À medida que ele passa mais tempo com os Scions, ele entende por que seu avô se sacrificou tanto pelo reino e resolve seguir seus passos. Comparado com sua irmã, Alphinaud é mais sensato e consegue superar rapidamente o choque de acontecimentos inesperados e reformular suas estratégias. Ele é mais seletivo em suas batalhas diplomáticas, reconhecendo que depois que seu pai o renegou e a Alisaie, qualquer novo envolvimento pioraria a situação.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/Alphinaud_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Alphinaud_big.png" style="margin-right: 100px">`;
     }
 
     function Graha() {
@@ -227,5 +227,5 @@
       <br>
       Cinco anos após a Calamidade, Minfilia recebe mais respeito como líder dos Scions of the Seventh Dawn, particularmente por seus pares no Círculo do Conhecimento. Ela está mais alegre agora que não precisa manter a organização em segredo, embora não esteja indiferente à gravidade do conflito crescente. Minfilia é calorosa e acolhedora com o aventureiro.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/Minfilia_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Minfilia_big.png" style="margin-right: 100px">`;
     }
