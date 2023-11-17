@@ -36,9 +36,9 @@
 
       intro_hero.innerHTML = `<span>Classe: Gunbreaker (Tank) <br> Thancred é um homem inteligente, de fala mansa e que gosta de mulheres, embora fique nervoso quando Minfilia Warde aponta alguns dos elementos mais sombrios de seu passado, mesmo como um elogio. Thancred é dedicado a Minfilia e a vê como uma amiga próxima, semelhante a uma irmã. Após a Calamidade, Thancred tornou-se um workaholic ao ponto da exaustão, tentando ocupar o lugar de Louisoix Leveilleur.
       <br>
-      Depois de saber que Minfilia havia se tornado a Palavra da Mãe, o temperamento de Thancred muda, tornando-se menos alegre e mais estóico e endurecido, embora ele ainda mantenha seu humor seco. Apesar disso, Thancred aceitou o destino de Minfilia.</span>`;
+      Depois de saber que Minfilia havia se tornado a Palavra da Mãe, o temperamento de Thancred muda, tornando-se menos alegre e mais estóico e endurecido, embora ele ainda mantenha seu humor seco. Apesar disso, Thancred aceitou o destino de Minfilia. Ele é dedicado à causa dos Scions of the Seventh Dawn e se tornou algo semelhante ao seu espião e reconagente, disposto a mergulhar em território hostil. Os outros Scions gostam de Thancred e o veem como um amigo próximo, especialmente Urianger e Y'sthola. Thancred, em troca, protege seus amigos e aliados e, em particular, tem o Guerreiro da Luz na mais alta estima. Nas últimas atualizações de Final Fantasy XIV: Stormblood, Thancred é revelado como um estrategista astuto e inteligente.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Thancred_big.png">`;
     }
 
     function Yshtola() {
@@ -54,9 +54,11 @@
 
     intro_hero.innerHTML = `<span>Classe: Black Mage (DPS) <br> Y'shtola é apresentada como "Conjuradora Cultuada", um apelido que reflete sua compostura calma. Ela é uma voz da razão taciturna e bem falada, mesmo ao lado de seus pares igualmente acadêmicos entre os Scions of the Seventh Dawn, fornecendo uma visão nítida e relevante que dificilmente se desvia do assunto em questão. Isso contrasta com Thancred Waters, que frequentemente lança frases carismáticas e extravagantes para ser desviada por seu estoicismo.
     <br>
-    A ousadia de Y'shtola surge quando sua paciência é testada ou como contra-ataque aos comentários ousados, irrelevantes ou conflitantes de outras pessoas. Ela deriva parte dessa audácia de seu antigo mestre, Matoya, os dois trocando piadas e insultos sutis. Apesar disso, eles se preocupam profundamente um com o outro, já que Y'shtola tem o maior respeito por sua antiga mestre, e Y'shtola tenta evitar desrespeitá-la.</span>`;
+    A ousadia de Y'shtola surge quando sua paciência é testada ou como contra-ataque aos comentários ousados, irrelevantes ou conflitantes de outras pessoas. Ela deriva parte dessa audácia de seu antigo mestre, Matoya, os dois trocando piadas e insultos sutis. Apesar disso, eles se preocupam profundamente um com o outro, já que Y'shtola tem o maior respeito por sua antiga mestre, e Y'shtola tenta evitar desrespeitá-la. Y'shtola também é naturalmente cínica com pessoas que escondem a verdade e suas intenções. Ela rapidamente perdeu a confiança do Exarca de Cristal logo após ser convocada para o Primeiro devido à sua natureza secreta, e tentou evitar a calamidade à sua maneira, em vez de cooperar com ele. Ela só faz isso mais uma vez depois que o Guerreiro da Luz chegou ao Primeiro.
+    <br>
+    Ela tem um senso de humor seco e muitas vezes revida o Guerreiro da Luz quando ele responde com uma opção de diálogo sedutor ou humorístico. No entanto, se o Guerreiro responder com uma resposta mais séria e acadêmica, Y'shtola rapidamente expressa sua aprovação.</span>`;
 
-    img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+    img_hero.innerHTML = `<img src="imagens/Y'shtola_bi.png">`;
     }
 
     function Urianger() {
@@ -70,11 +72,13 @@
 
       nome_hero.innerHTML = `Urianger`;
 
-      intro_hero.innerHTML = `<span>Classe: Astrologian (Healer) <br> Urianger Augurelt costuma falar em poesia e enigmas. Ele é bem versado na profecia que aponta para a Sétima Era Umbral e recita um versículo em quase todos os encontros. Embora sua aparência e maneirismos sejam intimidantes, ele é virtuoso. Embora tente esconder isso atrás de uma fachada séria, ele é próximo do companheiro Scion Moenbryda, conhecendo-a desde a infância. Embora reservado, Urianger é leal a seus companheiros Scions e a seu professor, Louisoix Leveilleur.
+      intro_hero.innerHTML = `<span>Classe: Astrologian (Healer) <br> Urianger Augurelt passou a juventude absorto em livros de profecia. Devorou ​​todo tipo de fonte sobre seu assunto preferido, adquirindo um vocabulário erudito e maneirismos poéticos que alienaram seus pares. Encorajado por seu amigo de infância, Moenbryda, Urianger ingressou no Studium sob os auspícios da maior autoridade em profecia, o Arconte Louisoix Leveilleur. Pensa-se que Urianger decidiu se juntar ao Círculo do Conhecimento para aprender a verdade das Crônicas Divinas de Mezaya Mil Olhos, uma obra que sugeria a vinda da Sétima Calamidade Umbral.
+      <br>
+      Urianger costuma falar em poesia e enigmas. Ele é bem versado na profecia que aponta para a Sétima Era Umbral e recita um versículo em quase todos os encontros. Embora sua aparência e maneirismos sejam intimidantes, ele é virtuoso. Embora tente esconder isso atrás de uma fachada séria, ele é próximo do companheiro Scion Moenbryda, conhecendo-a desde a infância. Embora reservado, Urianger é leal a seus companheiros Scions e a seu professor, Louisoix Leveilleur.
       <br>
       Dói-lhe enganar seus amigos ou ocultar-lhes informações, mas ele segue com suas convicções, pois elas são para um bem maior. Quando tudo for revelado, Urianger não dá desculpas e deseja humildemente o perdão e a compreensão dos seus companheiros.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Urianger_big.png">`;
     }
 
     function Alisae() {
@@ -94,7 +98,7 @@
       <br>
       Alisaie é a mais pragmática e direta das duas, na maioria das vezes preocupada com as possíveis ramificações de uma missão. Assim como Alphinaud, Alisaie respeita muito o Guerreiro da Luz e é especialmente grata por seu apoio em momentos difíceis. Ela vê os membros principais dos Scions como amigos íntimos e se preocupa muito com seu bem-estar.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Alisae_big.png">`;
     }
 
     function Alphinaud() {
@@ -112,7 +116,7 @@
       <br>
       Inicialmente Alphinaud participa dos assuntos de Eorzea com sua própria agenda: descobrir o que aconteceu com seu avô e terminar o que começou para testar seu potencial e provar seu valor. À medida que ele passa mais tempo com os Scions, ele entende por que seu avô se sacrificou tanto pelo reino e resolve seguir seus passos. Comparado com sua irmã, Alphinaud é mais sensato e consegue superar rapidamente o choque de acontecimentos inesperados e reformular suas estratégias. Ele é mais seletivo em suas batalhas diplomáticas, reconhecendo que depois que seu pai o renegou e a Alisaie, qualquer novo envolvimento pioraria a situação.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Alphinaud_big.png">`;
     }
 
     function Graha() {
@@ -132,7 +136,7 @@
       <br>     
       Após retornar à Fonte, G'raha adota mais uma vez uma personalidade calma e amigável. Mas suas experiências em liderar pessoas como o Exarca de Cristal ainda aparecem às vezes, culminando com ele assumindo um papel de liderança quando Radz-at-Han é atacado pelas blasfêmias. Apesar das influências de seu tempo como Exarca, ele frequentemente expressa algumas de suas características juvenis mais inocentes, como ser inseguro em se juntar aos Scions; tais características o ajudam a formar um vínculo particular com Alisaie Leveilleur, que age de maneira divertida como sua superiora.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/G'raha_tia_big.png">`;
     }
 
     function Estinien() {
@@ -150,7 +154,7 @@
       <br>
       Sua personalidade se suaviza após viajar com o Guerreiro da Luz e seus companheiros. Embora sua maneira rude de falar nunca mude, Estinien admite que deixou de ser a vingança como sua única motivação. Embora muitas vezes o insulte, Estinien faz amizade com Alphinaud Leveilleur. Aymeric de Borel sugere que Estinien vê Alphinaud como um reflexo do irmão mais novo que ele perdeu nas chamas de Nidhogg, enquanto Alphinaud vê Estinien como o irmão mais velho que ele gostaria de ter. Estinien respeita o Guerreiro da Luz como um camarada de confiança e fala muito bem de Sor Aymeric, acreditando que ele é a melhor esperança de Ishgard para um novo futuro..</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/Estinien.png">`;
+      img_hero.innerHTML = `<img src="imagens/Estinien_big.png">`;
     }
 
     function Tataru() {
@@ -164,11 +168,11 @@
 
       nome_hero.innerHTML = `Tataru Taru`;
 
-      intro_hero.innerHTML = `<span>Tesoureira dos Scions of the Seventh Dawn <br> Tataru Taru poderia ser considerada o membro mais inocente e gentil dos Scions of the Seventh Dawn, sempre disposto a ajudar seus membros com entusiasmo sem limites e um sorriso. Minfilia observou que Tataru costuma ser um bom juiz de caráter. Apesar de ser hábil como recepcionista e contadora, muitas vezes ela se sente inferior aos outros membros e tenta aprender várias outras profissões, como se tornar mineira e arcanista, embora esses empreendimentos raramente tenham sucesso. No entanto, ela permanece leal aos seus companheiros Scions que a tratam com o maior respeito. Ela se preocupa com a segurança dos Scions e se algum dia os verá novamente. Ela é uma costureira habilidosa e tem afinidade com performance, muitas vezes praticando malabarismo (em um objetivo equivocado de se tornar uma artista de rua), bem como ocasionalmente trabalhando como cantora na taverna de Ishgard, o Cavaleiro Esquecido. Uma missão secundária em Labyrinthos revela que ela tem um potencial inexplorado para se tornar uma força valiosa no campo de batalha devido ao seu Carbúnculo durar em reservas de éter quase indefinidas, quando deveria ter desaparecido há muito tempo.
+      intro_hero.innerHTML = `<span>Tesoureira dos Scions of the Seventh Dawn <br> Tataru Taru poderia ser considerada o membro mais inocente e gentil dos Scions of the Seventh Dawn, sempre disposto a ajudar seus membros com entusiasmo sem limites e um sorriso. Minfilia observou que Tataru costuma ser uma boa juíza de caráter. Apesar de ser hábil como recepcionista e contadora, muitas vezes ela se sente inferior aos outros membros e tenta aprender várias outras profissões, como se tornar mineira e arcanista, embora esses empreendimentos raramente tenham sucesso. No entanto, ela permanece leal aos seus companheiros Scions que a tratam com o maior respeito. Ela se preocupa com a segurança dos Scions e se algum dia os verá novamente. Ela é uma costureira habilidosa e tem afinidade com performance, muitas vezes praticando malabarismo (em um objetivo equivocado de se tornar uma artista de rua), bem como ocasionalmente trabalhando como cantora na taverna de Ishgard, o Cavaleiro Esquecido. Uma missão secundária em Labyrinthos revela que ela tem um potencial inexplorado para se tornar uma força valiosa no campo de batalha devido ao seu Carbúnculo durar em reservas de éter quase indefinidas, quando deveria ter desaparecido há muito tempo.
       <br>
       Tataru é inicialmente bastante tímida e insegura, mas conforme a história avança e ela encontra sua verdadeira vocação com os Scions, ela fica mais confiante e habilidosa. Às vezes ela até começa a aparecer sem ninguém esperar, e também começa a mostrar seu lado travesso. Embora cresça em outras áreas, como controle financeiro e alfaiataria, ela ainda prefere ficar longe do combate. Além de ser uma artesã talentosa, ela é uma mulher de negócios astuta e tem a ambição de transformar seu negócio em crescimento em um que possa rivalizar com a East Aldernald Company de Lolorito.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Tataru_big.png">`;
     }
 
     function Krile() {
@@ -186,7 +190,7 @@
       <br>
       Krile era a mentor de Alphinaud na Academia Sharlayan e, embora ela o provoque, ela pensa nele com carinho e aprova como ele amadureceu, sabendo que ele viria resgatá-la se ela estivesse em perigo. Ela tem muita paciência e cabeça fria, mas em raras ocasiões pode perder a calma e até mesmo o Guerreiro da Luz não está isento de sua repreensão.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Krile_big.png">`;
     }
 
     function Moenbryda() {
@@ -223,5 +227,5 @@
       <br>
       Cinco anos após a Calamidade, Minfilia recebe mais respeito como líder dos Scions of the Seventh Dawn, particularmente por seus pares no Círculo do Conhecimento. Ela está mais alegre agora que não precisa manter a organização em segredo, embora não esteja indiferente à gravidade do conflito crescente. Minfilia é calorosa e acolhedora com o aventureiro.</span>`;
 
-      img_hero.innerHTML = `<img src="imagens/WoL_big.png">`;
+      img_hero.innerHTML = `<img src="imagens/Minfilia_big.png">`;
     }
