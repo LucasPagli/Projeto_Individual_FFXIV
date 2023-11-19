@@ -138,6 +138,10 @@
       left: 25% !important;
       top: 5% !important;
     }
+    .job_intro {
+      top: 40vh !important;
+      width: 50vw !important;
+    }
   }
 
   @media screen and (max-width: 1165px) {
@@ -163,11 +167,14 @@
     .char_nome {
       top: 3% !important;
     }
+    .row > .column {
+      flex-direction: column !important;
+    }
   }
 
   /* Parallax */
 
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
     position: relative;
     opacity: 0.75;
     background-attachment: fixed;
@@ -178,7 +185,7 @@
 
   /* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
       background-attachment: scroll;
     }
   }
@@ -399,90 +406,265 @@
   
   .bgimg-3 {
     background-image: url("imagens/EW_center.jpeg");
-    min-height: 100vh;
+    min-height: 85vh;
     opacity: 0.95;
   }
 
-  #myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+  .bgimg-3 * {
+    box-sizing: border-box;
   }
   
-  #myImg:hover {opacity: 0.7;}
+  .row > .column {
+    position: relative;
+    top: 30vh;
+    left: 1%;
+    padding: 0 8px;
+    width: 19.5vw;
+    display: flex;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 20%;
+  }
   
   /* The Modal (background) */
   .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
   }
   
-  /* Modal Content (image) */
+  /* Modal Content */
   .modal-content {
+    position: relative;
+    background-color: #fefefe;
     margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-  }
-  
-  /* Caption of Modal Image */
-  #caption_modal {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
-  
-  /* Add Animation */
-  .modal-content, #caption_modal {  
-    animation-name: zoom;
-    animation-duration: 0.6s;
-  }
-  
-  @keyframes zoom {
-    from {transform: scale(0.1)} 
-    to {transform: scale(1)}
+    padding: 0;
+    width: 90%;
+    max-width: 65vw;
   }
   
   /* The Close Button */
   .close {
+    color: white;
     position: absolute;
-    top: 70px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
+    top: 7vh;
+    right: 25px;
+    font-size: 35px;
     font-weight: bold;
-    transition: 0.3s;
   }
   
   .close:hover,
   .close:focus {
-    color: #bbb;
+    color: #999;
     text-decoration: none;
     cursor: pointer;
   }
   
-  /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
-    .modal-content {
-      width: 100%;
-    }
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 20vh;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 2em;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .bgimg-3 img {
+    margin-bottom: -4px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+    font-size: 2.5em;
+    letter-spacing: 2.5px;
+    text-shadow: 0px 5px 5px rgb(43, 146, 230);
+  }
+  
+  .demo {
+    opacity: 0.6;
+    padding: 15px 0px;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-/* Scrollbar */
+  /* Classes */
+
+  .bgimg-4 {
+    min-height: 100vh;
+    opacity: 1;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  #myVideo {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #myBtn {
+    width: 10vw;
+    min-width: 100px;
+    font-size: 2em;
+    padding: 10px;
+    border: none;
+    background: #252525;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: rgb(183,48,48);
+    transition: color 0.5s;
+  }
+
+  .classes_portraits {
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    top: 10vh;
+    left: 1.5%;
+    }
+
+  .job_portrait {
+    height: 7vh;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .classes_portraits .job_portrait img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.75;
+    cursor: pointer;
+  }
+
+  .classes_portraits .job_portrait img:hover {
+    opacity: 1;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .job_intro {
+    background-color: rgb(0,0,0,0.9);
+    position: absolute;
+    top: 8.5%;
+    right: 1%;
+    height: fit-content;
+    max-height: 45vh;
+    color: #fff;
+    text-shadow: 1px 3px 3px rgb(43, 146, 230);
+    font-size: 2em;
+    letter-spacing: 2.5px;
+    width: 28vw;
+    min-width: 28vw;
+    word-wrap: break-word;
+    border-style: groove;
+    border-width: 5px;
+    border-color: #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: block;
+  }
+
+  .job_intro span {
+    margin: 25px;
+    display: block;
+  }
+
+  .slide_job_intro {
+    right: -100%;
+    -webkit-animation: slide_job_intro 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide_job_intro 0.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @-webkit-keyframes slide_job_intro {
+    100% { right: 1%; }
+  }
+
+  @keyframes slide_job_intro {
+      100% { right: 1%; }
+  }
+
+  /* Scrollbar */
 
   /* width */
   ::-webkit-scrollbar {
