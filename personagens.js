@@ -58,7 +58,7 @@
     <br>
     Ela tem um senso de humor seco e muitas vezes revida o Guerreiro da Luz quando ele responde com uma opção de diálogo sedutor ou humorístico. No entanto, se o Guerreiro responder com uma resposta mais séria e acadêmica, Y'shtola rapidamente expressa sua aprovação.</span>`;
 
-    img_hero.innerHTML = `<img src="imagens/Y'shtola_bi.png">`;
+    img_hero.innerHTML = `<img src="imagens/Y'shtola_big.png">`;
     }
 
     function Urianger() {

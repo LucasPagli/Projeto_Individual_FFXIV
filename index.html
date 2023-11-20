@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="style.css">
 <script src="personagens.js"></script>
 <script src="classes.js"></script>
+<link rel="shortcut icon" type="imagex/png" href="imagens/FF_Logo.ico">
+<title>Home</title>
 </head>
 <body>
 
@@ -15,10 +17,10 @@
   <a href="#personagens" onclick="PersonagensScroll()"> <div class="skewed">Personagens</div> </a>
   <a href="#expansoes" onclick="ExpansoesScroll()"> <div class="skewed">Expansões</div> </a>
   <a href="#classes" onclick="ClassesScroll()"> <div class="skewed">Classes</div> </a>
-  <a href="#musicas" onclick="SlideScroll()"> <div class="skewed">Músicas</div> </a>
+  <a href="#musicas"> <div class="skewed">Músicas</div> </a>
 
-  <a href="#login" class="nav-right"> <div class="skewed">Login</div> </a>
-  <a href="#cadastro" class="nav-right active"> <div class="skewed">Cadastro</div> </a>
+  <a href="login.html" class="nav-right"> <div class="skewed">Login</div> </a>
+  <a href="cadastro.html" class="nav-right active"> <div class="skewed">Cadastro</div> </a>
 
   <a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
     <i class="fa fa-bars"></i>
@@ -287,9 +289,5 @@
 
     function ClassesScroll() {
       document.getElementById("classes_scroll").scrollIntoView({behavior: "smooth"});
-    }
-
-    function FooterScroll() {
-      document.getElementById("footer_scroll").scrollIntoView({behavior: "smooth"});
     }
 </script>

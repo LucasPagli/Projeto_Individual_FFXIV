@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/FF_Logo.ico">
+    <link rel="stylesheet" href="login_cadastro.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="topnav sticky" id="myTopnav">
+        <img src="imagens/FF_Logo.png" alt="Logo">
+        <a href="index.html" onclick="HomeScroll()"> <div class="skewed">Home</div> </a>
+        <a href="index.html#personagens_scroll" onclick="PersonagensScroll()"> <div class="skewed">Personagens</div> </a>
+        <a href="index.html#expansoes_scroll" onclick="ExpansoesScroll()"> <div class="skewed">Expansões</div> </a>
+        <a href="index.html#classes_scroll" onclick="ClassesScroll()"> <div class="skewed">Classes</div> </a>
+        <a href="#musicas"> <div class="skewed">Músicas</div> </a>
+      
+        <a href="login.html" class="nav-right"> <div class="skewed">Login</div> </a>
+        <a href="cadastro.html" class="nav-right active"> <div class="skewed">Cadastro</div> </a>
+      
+        <a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="signup-form" action="index.html">
+                <h1>Cadastro</h1>
+                <input type="text" id="username" placeholder="Nome de Usuário" required />
+
+                <input type="email" id="email" placeholder="Email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Por favor, insira um endereço de e-mail válido" />
+
+                <input type="password" id="password" placeholder="Senha" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Por favor inserir pelo menos 8 dígitos, incluindo um número, símbolo, letra minúscula
+                e letra maiúscula" />
+
+                <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required />
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="signin-form" action="index.html">
+                <h1>Login</h1>
+                <input type="email" id="email-login" placeholder="Email" required />
+                <input type="password" id="password-login" placeholder="Senha" required />
+                <a href="#">Esqueceu sua senha?</a>
+                <button type="submit">Logar</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Já possui uma conta? Então acesse ela para aproveitar as músicas de Eorzea com seus companheiros!</p>
+                    <button class="ghost" id="signIn">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Olá, novo-velho amigo!</h1>
+                    <p>Insira suas informações e comece sua jornada conosco!</p>
+                    <button class="ghost" id="signUp">Cadastro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+/* Troca de classe pra animação de troca de login/cadastro */
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+/* Error message */
+function ErrorMessage() {
+    var x = document.getElementById("email");
+    var y = document.getElementById("password");
+    var z = document.getElementById("confirmPassword");
+    var contador = 1;
+
+    for (i = 0; i < contador; i++) {
+        if (x.className === "invalid") {
+            document.querySelector("error").style.display = "flex";
+            contador++;
+        }
+    }
+}
+
+ /* Função para responsividade do topnav */
+ function myResponsiveFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav sticky") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav sticky";
+      }
+    }
+
+    const signupForm = document.getElementById("signup-form");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("confirmPassword");
+    
+    const signinForm = document.getElementById("signin-form");
+    const emailLogin = document.getElementById("email-login");
+    const passwordLogin = document.getElementById("password-login");
+
+    // Email Validação
+    function checkEmail() {
+        const emaiPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!emailInput.value.match(emaiPattern)) {
+            return emailInput.classList.add("invalid"); //adicionando classe inválida se o valor do email não corresponder ao padrão de email
+        }
+        emailInput.classList.remove("invalid"); //removendo classe inválida se o valor do email corresponder a emaiPattern
+    }
+
+    // Senha Validação
+    function createPass() {
+        const passPattern =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        if (!passwordInput.value.match(passPattern)) {
+            return passwordInput.classList.add("invalid"); //adicionando classe inválida se o valor de entrada da senha não corresponder a passPattern
+        }
+        passwordInput.classList.remove("invalid"); //removendo classe inválida se o valor de entrada da senha corresponder a passPattern
+    }
+
+    // Confirmar Senha Validação
+    function confirmPass() {
+        if (passwordInput.value !== confirmPasswordInput.value || confirmPasswordInput.value === "") {
+            confirmPasswordInput.setCustomValidity("Senhas não estão iguais");
+            return confirmPasswordInput.classList.add("invalid");
+        }
+        confirmPasswordInput.classList.remove("invalid");
+        confirmPasswordInput.setCustomValidity('');
+    }
+
+    // Chamando Função no form submit
+    signupForm.addEventListener("submit", (e) => {
+        e.preventDefault(); //previnindo submit de trocar de página
+        checkEmail();
+        createPass();
+        confirmPass();
+
+        //Chamando funções pelo keyup para validar em tempo real
+        emailInput.addEventListener("keyup", checkEmail);
+        passwordInput.addEventListener("keyup", createPass);
+        confirmPasswordInput.addEventListener("keyup", confirmPass);
+
+        if (
+            !emailInput.classList.contains("invalid") &&
+            !passwordInput.classList.contains("invalid") &&
+            !confirmPasswordInput.classList.contains("invalid")
+        ) {
+            location.href = signupForm.getAttribute("action");
+        }
+    });
+    
+    signupForm.addEventListener("email", (e) => {
+        e.target.setCustomValidity('Email inválido');
+    });
+
+</script>
