@@ -598,7 +598,7 @@
     flex-wrap: wrap;
     gap: 30px;
     position: relative;
-    top: 10vh;
+    top: 12vh;
     left: 1.5%;
     }
 
@@ -624,7 +624,7 @@
   .job_intro {
     background-color: rgb(0,0,0,0.9);
     position: absolute;
-    top: 8.5%;
+    top: 12%;
     right: 1%;
     height: fit-content;
     max-height: 45vh;
