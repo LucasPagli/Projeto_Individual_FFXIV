@@ -1,0 +1,687 @@
+@font-face {
+  font-family: "FFont";
+  src: url("../OPTIEngeEtienne.otf");
+}
+
+* {
+  font-family: "FFont";
+}
+
+  body, html {
+    margin: 0;
+    height: 100%;
+  }
+
+  /* Navbar */
+  
+  .topnav {
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    transform: skew(-20deg);
+  }
+
+  .topnav .logoFF {
+    transform: skew(0deg);
+    padding: 0;
+  }
+
+  .topnav a.nav-right {
+    float: right;
+  }
+  
+  .topnav a:hover {
+    background-color: #252525;
+    border-color: rgb(183,48,48);
+    border-style: double;
+    border-width: 5px;
+    border-top-width: 0;
+    color: rgb(183,48,48);
+    transition: color 0.5s;
+  }
+ 
+  .topnav a:hover:before, .card a:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+  
+  .topnav a.active {
+    border-color: rgb(183,48,48);
+    border-style: double;
+    border-width: 5px;
+    border-top-width: 0;
+  }
+  
+  .topnav .icon {
+    display: none;
+    transform: skew(0deg);
+  }
+
+  .topnav img {
+    height: 70px;
+    margin-right: 5px;
+    float: left;
+  }
+
+  .skewed {
+    transform: skew(20deg);
+  }
+
+  .sticky {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Responsividade */
+  
+  @media screen and (max-width: 712px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 712px) {
+    .topnav.responsive {position: fixed;}
+    .topnav.responsive .icon {
+      position: fixed;
+      right: 0;
+      top: 0;
+      border-width: 0px;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      margin-left: 70px;
+      border-color: rgb(183,48,48);
+      border-style: inset;
+      border-width: 5px;
+      border-top-width: 0px;
+      border-bottom-width: 0px;
+      transform: skew(0deg);
+      background-color: #252525;
+    }
+    .topnav.responsive a:hover {
+      color: rgb(183,48,48);
+      transition: color 0.5s;
+    }
+    .skewed {
+      transform: skew(0deg);
+    }
+    .topnav a.active {
+      border-bottom-width: 5px;
+    }
+    .caption span.title, .caption span.sub_title {
+      text-shadow: 5px 5px 5px rgb(43, 146, 230) !important;
+    }
+    .caption span.sub_title {
+      font-size: 8vw !important;
+    }
+    .mini_portrait, .mini_portrait_nd {
+      height: 9vh !important;
+      margin-right: 5px;
+    }
+    .char_intro {
+      max-width: 70vw;
+      left: 25% !important;
+      top: 5% !important;
+    }
+    .job_intro {
+      top: 40vh !important;
+      width: 50vw !important;
+    }
+  }
+
+  @media screen and (max-width: 1165px) {
+    .portraits {
+      width: 84vw !important;
+    }
+    .mini_portrait {
+      top: 72vh !important;
+      width: 10vw !important;
+      height: 10vh !important;
+    }
+    .mini_portrait_nd {
+      top: 72.2vh !important;
+      width: 10vw !important;
+      height: 10vh !important;
+    }
+    .big_portrait img {
+      display: none;
+    }
+    .char_intro {
+      width: 80vw !important;
+    }
+    .char_nome {
+      top: 3% !important;
+    }
+    .row > .column {
+      flex-direction: column !important;
+    }
+  }
+
+  /* Parallax */
+
+  .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    position: relative;
+    opacity: 0.75;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+      background-attachment: scroll;
+    }
+  }
+  
+  /* Caption inicial */
+
+  .caption {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  
+
+  /* Home */
+
+  .bgimg-1 {
+    background-image: url("../imagens/Home_bg.jpg");
+    min-height: 100vh;
+  }
+
+  .caption span.title {
+    color: #fff;
+    text-shadow: 5px 5px 5px black;
+    padding: 18px;
+    font-size: 8vw;
+    letter-spacing: 10px;
+  }
+
+  .caption span.sub_title {
+    color: #fff;
+    text-shadow: 5px 5px 5px black;
+    padding: 18px;
+    font-size: 4vw;
+    letter-spacing: 10px;
+  }
+
+  /* Intro sections light and dark */
+
+  .section_title_light {
+    text-align:center;
+    letter-spacing: 10px;
+    font-size: 4.5em;
+    text-shadow: 5px 5px 5px grey;
+  }
+
+  .section_info_light {
+    color: black;
+    background-color:white;
+    text-align:center;
+    padding:50px 80px;
+  }
+
+  .section_text_light {
+    text-align:center;
+    letter-spacing: 2.5px;
+    font-size: 2em;
+  }
+
+  .section_text_light .destaque_light {
+    text-shadow: 0px 5px 5px rgb(43, 146, 230);
+  }
+
+  /* Personagens */
+
+  .bgimg-2 {
+    background-image: url("../imagens/mothercrystal.jpg");
+    min-height: 100vh;
+    opacity: 1;
+    display: flex;
+  }
+
+  .char_nome{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  top: 12%;
+  color: #fff;
+  text-shadow: 5px 5px 5px black;
+  font-size: 4.5em;
+  letter-spacing: 10px;
+  }
+
+  .char_intro {
+    background-color: rgb(0,0,0,0.9);
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    height: fit-content;
+    max-height: 60vh;
+    color: #fff;
+    text-shadow: 1px 3px 3px rgb(43, 146, 230);
+    font-size: 2em;
+    letter-spacing: 2.5px;
+    width: 50vw;
+    word-wrap: break-word;
+    border-style: groove;
+    border-width: 5px;
+    border-color: #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: block;
+  }
+
+  .char_intro span {
+    margin: 25px;
+    display: block;
+  }
+
+  .big_portrait {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .big_portrait img{
+    height: 100vh;
+  }
+
+  .portraits {
+    display: flex;
+    height: 10vh;
+    width: 40vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: absolute;
+  }
+
+  .mini_portrait {
+    border-color: rgb(78,160,228);
+    border-style: groove;
+    border-width: 5px;
+    overflow: hidden;
+    height: 9vh;
+    width: 5vw;
+    position: relative;
+    top: 77.5vh;
+    left: 2.5%;
+    cursor: pointer;
+  }
+
+  .mini_portrait_nd {
+    border-color: rgb(78,160,228);
+    border-style: groove;
+    border-width: 5px;
+    overflow: hidden;
+    height: 9vh;
+    width: 5vw;
+    position: relative;
+    top: 77.7vh;
+    left: 2.5%;
+    cursor: pointer;
+  }
+
+  .portraits .mini_portrait img, .portraits .mini_portrait_nd img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  .portraits .mini_portrait img:hover, .portraits .mini_portrait_nd img:hover {
+    opacity: 1;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .slide {
+    left: -100px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 0.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @-webkit-keyframes slide {
+    100% { left: 0; }
+  }
+
+  @keyframes slide {
+      100% { left: 0; }
+  }
+
+  .slide_intro {
+    left: -100%;
+    -webkit-animation: slide_intro 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide_intro 0.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @-webkit-keyframes slide_intro {
+    100% { left: 15%; }
+  }
+
+  @keyframes slide_intro {
+      100% { left: 15%; }
+  }
+
+  .slide_big {
+    animation: fadeIn 3s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @-webkit-keyframes slide_intro {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  /* Expansões */
+  
+  .bgimg-3 {
+    background-image: url("../imagens/EW_center.jpeg");
+    min-height: 85vh;
+    opacity: 0.95;
+  }
+
+  .bgimg-3 * {
+    box-sizing: border-box;
+  }
+  
+  .row > .column {
+    position: relative;
+    top: 30vh;
+    left: 1%;
+    padding: 0 8px;
+    width: 19.5vw;
+    display: flex;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column {
+    float: left;
+    width: 20%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 65vw;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 7vh;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 20vh;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 2em;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .bgimg-3 img {
+    margin-bottom: -4px;
+  }
+  
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+    font-size: 2.5em;
+    letter-spacing: 2.5px;
+    text-shadow: 0px 5px 5px rgb(43, 146, 230);
+  }
+  
+  .demo {
+    opacity: 0.6;
+    padding: 15px 0px;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /* Classes */
+
+  .bgimg-4 {
+    min-height: 100vh;
+    opacity: 1;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  #myVideo {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #myBtn {
+    width: 10vw;
+    min-width: 100px;
+    font-size: 2em;
+    padding: 10px;
+    border: none;
+    background: #252525;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: rgb(183,48,48);
+    transition: color 0.5s;
+  }
+
+  .classes_portraits {
+    display: flex;
+    height: 85vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    top: 12vh;
+    left: 1.5%;
+    }
+
+  .job_portrait {
+    height: 7vh;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .classes_portraits .job_portrait img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.75;
+    cursor: pointer;
+  }
+
+  .classes_portraits .job_portrait img:hover {
+    opacity: 1;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .job_intro {
+    background-color: rgb(0,0,0,0.9);
+    position: absolute;
+    top: 12%;
+    right: 1%;
+    height: fit-content;
+    max-height: 45vh;
+    color: #fff;
+    text-shadow: 1px 3px 3px rgb(43, 146, 230);
+    font-size: 2em;
+    letter-spacing: 2.5px;
+    width: 28vw;
+    min-width: 28vw;
+    word-wrap: break-word;
+    border-style: groove;
+    border-width: 5px;
+    border-color: #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: block;
+  }
+
+  .job_intro span {
+    margin: 25px;
+    display: block;
+  }
+
+  .slide_job_intro {
+    right: -100%;
+    -webkit-animation: slide_job_intro 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide_job_intro 0.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @-webkit-keyframes slide_job_intro {
+    100% { right: 1%; }
+  }
+
+  @keyframes slide_job_intro {
+      100% { right: 1%; }
+  }
+
+  /* Scrollbar */
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
