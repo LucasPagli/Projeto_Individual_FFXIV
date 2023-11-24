@@ -12,11 +12,11 @@
 
     <div class="topnav sticky" id="myTopnav">
         <img src="imagens/FF_Logo.png" alt="Logo">
-        <a href="index.html" onclick="HomeScroll()"> <div class="skewed">Home</div> </a>
-        <a href="index.html#personagens_scroll" onclick="PersonagensScroll()"> <div class="skewed">Personagens</div> </a>
-        <a href="index.html#expansoes_scroll" onclick="ExpansoesScroll()"> <div class="skewed">Expansões</div> </a>
-        <a href="index.html#classes_scroll" onclick="ClassesScroll()"> <div class="skewed">Classes</div> </a>
-        <a href="#musicas"> <div class="skewed">Músicas</div> </a>
+        <a href="index.html"> <div class="skewed">Home</div> </a>
+        <a href="index.html#personagens_scroll"> <div class="skewed">Personagens</div> </a>
+        <a href="index.html#expansoes_scroll"> <div class="skewed">Expansões</div> </a>
+        <a href="index.html#classes_scroll"> <div class="skewed">Classes</div> </a>
+        <a href="musica.html"> <div class="skewed">Músicas</div> </a>
       
         <a href="login.html" class="nav-right"> <div class="skewed">Login</div> </a>
         <a href="cadastro.html" class="nav-right active"> <div class="skewed">Cadastro</div> </a>
@@ -28,7 +28,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form id="signup-form" action="index.html">
+            <form id="signup-form" action="login.html">
                 <h1>Cadastro</h1>
                 <input type="text" id="username" placeholder="Nome de Usuário" required />
 
@@ -42,10 +42,10 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form id="signin-form" action="index.html">
+            <form id="signin-form">
                 <h1>Login</h1>
-                <input type="email" id="email-login" placeholder="Email" required />
-                <input type="password" id="password-login" placeholder="Senha" required />
+                <input type="email" id="email_login" placeholder="Email" required />
+                <input type="password" id="password_login" placeholder="Senha" required />
                 <a href="#">Esqueceu sua senha?</a>
                 <button type="submit">Logar</button>
             </form>
@@ -84,7 +84,27 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
-function cadastrar() {
+ /* Função para responsividade do topnav */
+ function myResponsiveFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav sticky") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav sticky";
+      }
+    }
+
+    /* Função para responsividade do topnav */
+ function myResponsiveFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav sticky") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav sticky";
+      }
+    }
+
+    function cadastrar() {
     // aguardar();
     var nomeUser = document.getElementById('username').value;
     var emailUser = document.getElementById('email').value;
@@ -92,7 +112,7 @@ function cadastrar() {
     var confirmSenha = document.getElementById('confirmPassword').value;
         
     // Enviando o valor da nova input
-    fetch("/cadastro/cadastrar", {
+    fetch("/login/cadastrar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -132,14 +152,66 @@ function cadastrar() {
     return false;
   }
 
+  function entrar() {
+        // aguardar();
+
+        var emailUser = email_login.value;
+        var senhaUser = password_login.value;
+
+        console.log("FORM LOGIN: ", emailUser);
+        console.log("FORM SENHA: ", senhaUser);
+
+        fetch("/login/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailUser,
+                senhaServer: senhaUser
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.clear();
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.username;
+                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "index.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
     const signupForm = document.getElementById("signup-form");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     const confirmPasswordInput = document.getElementById("confirmPassword");
-    
-    const signinForm = document.getElementById("signin-form");
-    const emailLogin = document.getElementById("email-login");
-    const passwordLogin = document.getElementById("password-login");
 
     // Email Validação
     function checkEmail() {
@@ -190,6 +262,47 @@ function cadastrar() {
         ) {
             cadastrar();
             location.href = signupForm.getAttribute("action");
+        }
+    });
+
+    const signinForm = document.getElementById("signin-form");
+    const emailLogin = document.getElementById("email_login");
+    const passwordLogin = document.getElementById("password_login");
+
+    // Email Validação
+    function checkLogin() {
+        const emaiPatLogin = "";
+        if (emailLogin.value == "") {
+            return emailLogin.classList.add("invalid"); //adicionando classe inválida se o valor do email não corresponder ao padrão de email
+        }
+        emailLogin.classList.remove("invalid"); //removendo classe inválida se o valor do email corresponder a emaiPattern
+    }
+
+    // Senha Validação
+    function confirmPassLogin() {
+
+        if (passwordLogin.value == "") {
+            return passwordLogin.classList.add("invalid"); //adicionando classe inválida se o valor de entrada da senha não corresponder a passPattern
+        }
+        passwordLogin.classList.remove("invalid"); //removendo classe inválida se o valor de entrada da senha corresponder a passPattern
+    }
+
+    // Chamando Função no form submit
+    signinForm.addEventListener("submit", (event) => {
+        event.preventDefault(); //previnindo submit de trocar de página
+        checkLogin();
+        confirmPassLogin();
+
+        //Chamando funções pelo keyup para validar em tempo real
+        emailLogin.addEventListener("keyup", checkLogin);
+        passwordLogin.addEventListener("keyup", confirmPassLogin);
+
+        if (
+            !emailLogin.classList.contains("invalid") &&
+            !passwordLogin.classList.contains("invalid")
+        ) {
+            entrar();
+            // location.href = signinForm.getAttribute("action");
         }
     });
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style_musica.css">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/FF_Logo.ico">
+    <title>Música</title>
+</head>
+<body>
+
+    <div class="topnav sticky" id="myTopnav">
+        <img src="imagens/FF_Logo.png" alt="Logo">
+        <a href="index.html"> <div class="skewed">Home</div> </a>
+        <a href="index.html#personagens_scroll"> <div class="skewed">Personagens</div> </a>
+        <a href="index.html#expansoes_scroll"> <div class="skewed">Expansões</div> </a>
+        <a href="index.html#classes_scroll"> <div class="skewed">Classes</div> </a>
+        <a href="musica.html"> <div class="skewed">Músicas</div> </a>
+      
+        <a href="login.html" class="nav-right"> <div class="skewed">Login</div> </a>
+        <a href="cadastro.html" class="nav-right active"> <div class="skewed">Cadastro</div> </a>
+      
+        <a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="bgimg-1" id="home_scroll">
+
+        <div id="mySidenav" class="sidenav">
+            <a onclick="playMusic('./musicas/AlexanderPrime_theme.mp3')"  id="boss1">Alexander</a>
+            <a onclick="playMusic('./musicas/Titan_theme.mp3')" id="boss2">Titan</a>
+            <a onclick="playMusic('./musicas/Garuda_theme.mp3')" id="boss3">Garuda</a>
+            <a onclick="playMusic('./musicas/Ultima_theme.mp3')" id="boss4">Ultima</a>
+            <a onclick="playMusic('./musicas/Shiva_theme.mp3')" id="boss5">Shiva</a>
+            <a onclick="playMusic('./musicas/Nidhogg_theme.mp3')" id="boss6">Nidhogg</a>
+        </div>
+
+        <div id="fight">
+            <div class="bossPixel" id="boss">
+                <img src="./imagens/Alexander.png">
+            </div>
+            <div class="partyPixel" id="party">
+                <img src="./imagens/Warrior_pixel.png" id="WoL">
+                <img src="./imagens/Alisae_pixel.png" id="firstMember">
+                <img src="./imagens/Alphinaud_pixel.png" id="secondMember">
+                <img src="./imagens/Estinien_pixel.png" id="thirdMember">
+            </div>
+        </div>
+
+        <input type="range" min="0" max="1" step="0.1" value="1" id="volumeControl" onchange="setVolume(this.value)">
+
+        <audio id="myMusic" src=""></audio>
+
+        <div class="vinyl"><img src="./imagens/vinyl.gif"></div>
+
+        <button id="myBtn" onclick="myButton()">Pause</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+/* Função para responsividade do topnav */
+function myResponsiveFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav sticky") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav sticky";
+      }
+    }
+
+const audioElement = document.getElementById("myMusic");
+var btn = document.getElementById("myBtn");
+
+function playMusic(audioSrc) {
+  // Pause the currently playing music
+  audioElement.pause();
+  audioElement.currentTime = 0;
+
+  // Load and play the new music
+  audioElement.src = audioSrc;
+  audioElement.play();
+}
+
+function myButton() {
+      if (audioElement.paused) {
+        audioElement.play();
+        btn.innerHTML = "Pause";
+      } else {
+        audioElement.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+
+function setVolume(volume) {
+  audioElement.volume = volume;
+}
+
+</script>
