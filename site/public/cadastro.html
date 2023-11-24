@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,36 @@
     <link rel="stylesheet" href="./css/login_cadastro.css">
     <title>Cadastro</title>
 </head>
+
 <body>
 
     <div class="topnav sticky" id="myTopnav">
         <img src="imagens/FF_Logo.png" alt="Logo">
-        <a href="index.html"> <div class="skewed">Home</div> </a>
-        <a href="index.html#personagens_scroll"> <div class="skewed">Personagens</div> </a>
-        <a href="index.html#expansoes_scroll"> <div class="skewed">Expansões</div> </a>
-        <a href="index.html#classes_scroll"> <div class="skewed">Classes</div> </a>
-        <a href="musica.html"> <div class="skewed">Músicas</div> </a>
-      
-        <a href="login.html" class="nav-right"> <div class="skewed">Login</div> </a>
-        <a href="cadastro.html" class="nav-right active"> <div class="skewed">Cadastro</div> </a>
-      
+        <a href="index.html">
+            <div class="skewed">Home</div>
+        </a>
+        <a href="index.html#personagens_scroll">
+            <div class="skewed">Personagens</div>
+        </a>
+        <a href="index.html#expansoes_scroll">
+            <div class="skewed">Expansões</div>
+        </a>
+        <a href="index.html#classes_scroll">
+            <div class="skewed">Classes</div>
+        </a>
+        <a href="musica.html">
+            <div class="skewed">Músicas</div>
+        </a>
+
+        <a href="login.html" class="nav-right">
+            <div class="skewed">Login</div>
+        </a>
+        <a href="cadastro.html" class="nav-right active">
+            <div class="skewed">Cadastro</div>
+        </a>
+
         <a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
-          <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"></i>
         </a>
     </div>
 
@@ -32,9 +48,12 @@
                 <h1>Cadastro</h1>
                 <input type="text" id="username" placeholder="Nome de Usuário" required />
 
-                <input type="email" id="email" placeholder="Email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Por favor, insira um endereço de e-mail válido" />
+                <input type="email" id="email" placeholder="Email" required
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                    title="Por favor, insira um endereço de e-mail válido" />
 
-                <input type="password" id="password" placeholder="Senha" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Por favor inserir pelo menos 8 dígitos, incluindo um número, símbolo, letra minúscula
+                <input type="password" id="password" placeholder="Senha" required
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Por favor inserir pelo menos 8 dígitos, incluindo um número, símbolo, letra minúscula
                 e letra maiúscula" />
 
                 <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required />
@@ -54,7 +73,8 @@
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <h1>Bem-vindo de volta!</h1>
-                    <p>Já possui uma conta? Então acesse ela para aproveitar as músicas de Eorzea com seus companheiros!</p>
+                    <p>Já possui uma conta? Então acesse ela para aproveitar as músicas de Eorzea com seus companheiros!
+                    </p>
                     <button class="ghost" id="signIn">Login</button>
                 </div>
                 <div class="overlay-panel overlay-right">
@@ -65,94 +85,95 @@
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
 
 <script>
 
-/* Troca de classe pra animação de troca de login/cadastro */
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+    /* Troca de classe pra animação de troca de login/cadastro */
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
 
- /* Função para responsividade do topnav */
- function myResponsiveFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav sticky") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav sticky";
-      }
+    /* Função para responsividade do topnav */
+    function myResponsiveFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav sticky") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav sticky";
+        }
     }
 
     /* Função para responsividade do topnav */
- function myResponsiveFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav sticky") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav sticky";
-      }
+    function myResponsiveFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav sticky") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav sticky";
+        }
     }
 
     function cadastrar() {
-    // aguardar();
-    var nomeUser = document.getElementById('username').value;
-    var emailUser = document.getElementById('email').value;
-    var senhaUser = document.getElementById('password').value;
-    var confirmSenha = document.getElementById('confirmPassword').value;
-        
-    // Enviando o valor da nova input
-    fetch("/cadastro/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeUser,
-        emailServer: emailUser,
-        senhaServer: senhaUser
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+        // aguardar();
+        var nomeUser = document.getElementById('username').value;
+        var emailUser = document.getElementById('email').value;
+        var senhaUser = document.getElementById('password').value;
+        var confirmSenha = document.getElementById('confirmPassword').value;
 
-        if (resposta.ok) {
-        //   cardErro.style.display = "block";
+        // Enviando o valor da nova input
+        fetch("/cadastro/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeUser,
+                emailServer: emailUser,
+                senhaServer: senhaUser
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
 
-        //   mensagem_erro.innerHTML =
-        //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                if (resposta.ok) {
+                    //   cardErro.style.display = "block";
 
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
+                    //   mensagem_erro.innerHTML =
+                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-        //   limparFormulario();
-        //   finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-      });
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
 
-    return false;
-  }
+                    //   limparFormulario();
+                    //   finalizarAguardar();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
 
-  function entrar() {
+        return false;
+    }
+
+    function entrar() {
         // aguardar();
 
         var emailUser = email_login.value;

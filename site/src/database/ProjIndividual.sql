@@ -57,7 +57,16 @@ create table musica (
 idMusica int primary key auto_increment,
 nomeMusica varchar(45),
 expansao varchar(45)
-) auto_increment = 100;
+);
+
+insert into musica values 
+	(null, 'Alexander', 'Heavensward'),
+    (null, 'Titan', 'A Realm Reborn'),
+    (null, 'Garuda', 'A Realm Reborn'),
+    (null, 'Shiva', 'A Realm Reborn'),
+    (null, 'Nidhogg', 'Heavensward');
+    
+select * from musica;
 
 create table usuario_musica_contador (
 idUserMusic int,

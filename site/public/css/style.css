@@ -10,6 +10,7 @@
   body, html {
     margin: 0;
     height: 100%;
+    overflow-x: hidden;
   }
 
   /* Navbar */
@@ -80,6 +81,10 @@
     z-index: 2;
     top: 0;
     width: 100%;
+  }
+
+  .logado {
+    display: none !important;
   }
 
   /* Responsividade */
@@ -269,6 +274,47 @@
   text-shadow: 5px 5px 5px black;
   font-size: 4.5em;
   letter-spacing: 10px;
+  }
+
+  #mySidenav a {
+    position: absolute;
+    right: -90px;
+    transition: 0.3s;
+    padding: 5px;
+    width: 150px;
+    text-decoration: none;
+    font-size: 1.75em;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    border-style: groove;
+    border-width: 5px;
+    border-color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+  }
+  
+  #mySidenav a:hover {
+    right: 0;
+  }
+
+  #btnCreateParty {
+    top: 50vh;
+  }
+
+  #btnFavorito1 {
+    top: 60vh;
+  }
+  
+  #btnFavorito2 {
+    top: 70vh;
+  }
+  
+  #btnFavorito3 {
+    top: 80vh;
+  }
+  
+  #btnEnviarFav {
+    top: 90vh;
   }
 
   .char_intro {
