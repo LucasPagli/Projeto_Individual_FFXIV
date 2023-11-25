@@ -22,10 +22,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.use("/", indexRouter);
+app.use("/criarParty", indexRouter);
+app.use("/gravarParty", indexRouter);
 app.use("/cadastro", cadastroRouter);
 app.use("/login", loginRouter);
-// app.use("/medidas", medidasRouter);
-// app.use("/aquarios", aquariosRouter);
 // app.use("/empresas", empresasRouter);
 
 app.listen(PORTA, function () {

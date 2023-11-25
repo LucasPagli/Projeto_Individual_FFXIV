@@ -70,12 +70,12 @@
 
     <div class="bgimg-2" id="personagens_scroll">
       <div class="char_nome" id="nome_hero">Warrior of Light</div>
-      <div id="mySidenav" class="sidenav">
-        <a onclick="" id="btnCreateParty">Criar Party</a>
+      <div id="mySidenav" class="sidenav logado">
+        <a onclick="criarParty()" id="btnCreateParty">Criar Party</a>
         <a onclick="selecionarFavorito1()" id="btnFavorito1">Favorito 1º</a>
         <a onclick="selecionarFavorito2()" id="btnFavorito2">Favorito 2º</a>
         <a onclick="selecionarFavorito3()" id="btnFavorito3">Favorito 3º</a>
-        <a onclick="" id="btnEnviarFav">Gravar Party</a>
+        <a onclick="gravarParty()" id="btnEnviarFav">Registrar Party</a>
       </div>
       <div class="char_intro" id="intro_hero">
         <span>O Guerreiro da Luz, também conhecido como Aventureiro, é o personagem criado pelo jogador em Final Fantasy
@@ -296,17 +296,20 @@
     const cadastroNavbar = document.getElementById("navCadastro");
     const sairNavbar = document.getElementById("navSair");
     const perfilNavbar = document.getElementById("navPerfil");
+    const sideNavbar = document.getElementById("mySidenav");
 
     if (sessionStorage.length == 0) {
       loginNavbar.classList.remove("logado");
       cadastroNavbar.classList.remove("logado");
       sairNavbar.classList.add("logado");
       perfilNavbar.classList.add("logado");
+      sideNavbar.classList.add("logado");
     } else {
       loginNavbar.classList.add("logado");
       cadastroNavbar.classList.add("logado");
       sairNavbar.classList.remove("logado");
       perfilNavbar.classList.remove("logado");
+      sideNavbar.classList.remove("logado");
     }
   }
 
@@ -357,7 +360,7 @@
         var idUser = sessionStorage.ID_USUARIO;
 
         // Enviando o valor da nova input
-        fetch("/cadastro/cadastrar", {
+        fetch("/criarParty", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -384,7 +387,7 @@
                     //   limparFormulario();
                     //   finalizarAguardar();
                 } else {
-                    throw "Houve um erro ao tentar realizar o cadastro!";
+                    throw alert("Houve um erro ao tentar realizar a criação da sua party! Você só pode ter apenas uma party por vez, então tente registrar party agora!");
                 }
             })
             .catch(function (resposta) {
@@ -400,9 +403,10 @@
         var Fav1User = Favoritos[0];
         var Fav2User = Favoritos[1];
         var Fav3User = Favoritos[2];
+        var id2User = sessionStorage.ID_USUARIO;
 
         // Enviando o valor da nova input
-        fetch("/index/criarParty", {
+        fetch("/gravarParty", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -412,7 +416,8 @@
                 // Agora vá para o arquivo routes/usuario.js
                 Fav1Server: Fav1User,
                 Fav2Server: Fav2User,
-                Fav3Server: Fav3User
+                Fav3Server: Fav3User,
+                id2Server: id2User
             }),
         })
             .then(function (resposta) {
@@ -425,13 +430,14 @@
                     //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                     setTimeout(() => {
+                      alert(`Party registrada com sucesso! Aproveite as músicas com sua party!`);
                       window.location = "musica.html";
                     }, "2000");
 
                     //   limparFormulario();
                     //   finalizarAguardar();
                 } else {
-                    throw "Houve um erro ao tentar realizar o cadastro!";
+                    throw alert("Houve um erro ao tentar realizar o registro da sua party! Tenha certeza de que todos os 3 heróis tenham sido relacionados!");
                 }
             })
             .catch(function (resposta) {

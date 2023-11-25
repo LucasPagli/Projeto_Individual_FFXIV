@@ -11,6 +11,8 @@ senha varchar(45)
 
 select * from usuario;
 
+select fkUsuario from party join usuario on fkUsuario = idUsuario;
+
 create table classe (
 idClasse int primary key auto_increment,
 nomeClasse varchar(45),
@@ -45,7 +47,7 @@ alter table usuario add column fkClasse int,
 		references classe(idClasse);
         
 create table party (
-idParty int,
+idParty int auto_increment,
 fkUsuario int unique,
 primary key (idParty, fkUsuario),
 firstMember varchar(45),
