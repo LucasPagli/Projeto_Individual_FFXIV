@@ -55,6 +55,8 @@ secondMember varchar(45),
 thirdMember varchar(45)
 ) auto_increment = 1000;
 
+select * from party;
+
 create table musica (
 idMusica int primary key auto_increment,
 nomeMusica varchar(45),
@@ -65,19 +67,21 @@ insert into musica values
 	(null, 'Alexander', 'Heavensward'),
     (null, 'Titan', 'A Realm Reborn'),
     (null, 'Garuda', 'A Realm Reborn'),
+    (null, 'Ultima', 'A Realm Reborn'),
     (null, 'Shiva', 'A Realm Reborn'),
     (null, 'Nidhogg', 'Heavensward');
     
 select * from musica;
 
 create table usuario_musica_contador (
-idUserMusic int,
 fkUsuario int,
 fkMusica int,
-primary key (idUserMusic, fkUsuario, fkMusica),
+primary key (fkUsuario, fkMusica),
 vezesEscutada int,
 constraint fkUsuarioMusic foreign key (fkUsuario)
 	references usuario(idUsuario),
 constraint fkMusica foreign key (fkMusica)
 	references musica(idMusica)
 );
+
+select * from usuario_musica_contador;

@@ -78,6 +78,10 @@
     width: 100%;
   }
 
+  .logado {
+    display: none !important;
+  }
+
   /* Responsividade */
   
   @media screen and (max-width: 712px) {

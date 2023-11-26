@@ -276,7 +276,7 @@
   letter-spacing: 10px;
   }
 
-  #mySidenav a {
+  #mySidenav a, #mySidenavClasse a {
     position: absolute;
     right: -90px;
     transition: 0.3s;
@@ -293,7 +293,7 @@
     cursor: pointer;
   }
   
-  #mySidenav a:hover {
+  #mySidenav a:hover, #mySidenavClasse a:hover {
     right: 0;
   }
 
@@ -708,6 +708,10 @@
 
   @keyframes slide_job_intro {
       100% { right: 1%; }
+  }
+
+  #btnClasseFavorita {
+    top: 80vh;
   }
 
   /* Scrollbar */

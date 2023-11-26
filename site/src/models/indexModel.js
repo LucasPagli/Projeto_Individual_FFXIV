@@ -22,7 +22,17 @@ function gravarParty(Fav1, Fav2, Fav3, idFK) {
     return database.executar(instrucao);
 }
 
+function registrarClasseFav(FavJob, SpecificUserId) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", FavJob, SpecificUserId);
+    var instrucao = `
+        UPDATE usuario SET fkClasse='${FavJob}' WHERE idUsuario='${SpecificUserId}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     criarParty,
-    gravarParty
+    gravarParty,
+    registrarClasseFav
 }; 

@@ -77,7 +77,43 @@ function gravarParty(req, res) {
     }
 }
 
+function registrarClasseFav(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var FavJob = req.body.FavJobServer;
+    // var cpf = req.body.cpfServer;
+    var SpecificUserId = req.body.id3Server;
+    // var empresaId = req.body.empresaServer;
+
+    // Faça as validações dos valores
+    if (FavJob == undefined) {
+        res.status(400).send("Seu favorito 1 está undefined!");
+    // } else if (cpf == undefined) {
+    //     res.status(400).send("Seu cpf está undefined!");
+    } else if (SpecificUserId == undefined) {
+        res.status(400).send("Seu SpecificUserId está undefined!");
+    } else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        indexModel.registrarClasseFav(FavJob, SpecificUserId)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o registro da party! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     criarParty,
-    gravarParty
+    gravarParty,
+    registrarClasseFav
 }

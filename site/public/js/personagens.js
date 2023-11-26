@@ -32,9 +32,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Thancred Waters`;
+      nome_hero.innerHTML = `Thancred`;
 
-      intro_hero.innerHTML = `<span>Classe: Gunbreaker (Tank) <br> Thancred é um homem inteligente, de fala mansa e que gosta de mulheres, embora fique nervoso quando Minfilia Warde aponta alguns dos elementos mais sombrios de seu passado, mesmo como um elogio. Thancred é dedicado a Minfilia e a vê como uma amiga próxima, semelhante a uma irmã. Após a Calamidade, Thancred tornou-se um workaholic ao ponto da exaustão, tentando ocupar o lugar de Louisoix Leveilleur.
+      intro_hero.innerHTML = `<span>Classe: Gunbreaker (Tank) <br> Thancred Waters é um homem inteligente, de fala mansa e que gosta de mulheres, embora fique nervoso quando Minfilia Warde aponta alguns dos elementos mais sombrios de seu passado, mesmo como um elogio. Thancred é dedicado a Minfilia e a vê como uma amiga próxima, semelhante a uma irmã. Após a Calamidade, Thancred tornou-se um workaholic ao ponto da exaustão, tentando ocupar o lugar de Louisoix Leveilleur.
       <br>
       Depois de saber que Minfilia havia se tornado a Palavra da Mãe, o temperamento de Thancred muda, tornando-se menos alegre e mais estóico e endurecido, embora ele ainda mantenha seu humor seco. Apesar disso, Thancred aceitou o destino de Minfilia. Ele é dedicado à causa dos Scions of the Seventh Dawn e se tornou algo semelhante ao seu espião e reconagente, disposto a mergulhar em território hostil. Os outros Scions gostam de Thancred e o veem como um amigo próximo, especialmente Urianger e Y'sthola. Thancred, em troca, protege seus amigos e aliados e, em particular, tem o Guerreiro da Luz na mais alta estima. Nas últimas atualizações de Final Fantasy XIV: Stormblood, Thancred é revelado como um estrategista astuto e inteligente.</span>`;
 
@@ -50,9 +50,9 @@
       setTimeout(SlideRemove, 3000)
     }
 
-    nome_hero.innerHTML = `Y'shtola Rhul`;
+    nome_hero.innerHTML = `Y'shtola`;
 
-    intro_hero.innerHTML = `<span>Classe: Black Mage (DPS) <br> Y'shtola é apresentada como "Conjuradora Cultuada", um apelido que reflete sua compostura calma. Ela é uma voz da razão taciturna e bem falada, mesmo ao lado de seus pares igualmente acadêmicos entre os Scions of the Seventh Dawn, fornecendo uma visão nítida e relevante que dificilmente se desvia do assunto em questão. Isso contrasta com Thancred Waters, que frequentemente lança frases carismáticas e extravagantes para ser desviada por seu estoicismo.
+    intro_hero.innerHTML = `<span>Classe: Black Mage (DPS) <br> Y'shtola Rhul é apresentada como "Conjuradora Cultuada", um apelido que reflete sua compostura calma. Ela é uma voz da razão taciturna e bem falada, mesmo ao lado de seus pares igualmente acadêmicos entre os Scions of the Seventh Dawn, fornecendo uma visão nítida e relevante que dificilmente se desvia do assunto em questão. Isso contrasta com Thancred Waters, que frequentemente lança frases carismáticas e extravagantes para ser desviada por seu estoicismo.
     <br>
     A ousadia de Y'shtola surge quando sua paciência é testada ou como contra-ataque aos comentários ousados, irrelevantes ou conflitantes de outras pessoas. Ela deriva parte dessa audácia de seu antigo mestre, Matoya, os dois trocando piadas e insultos sutis. Apesar disso, eles se preocupam profundamente um com o outro, já que Y'shtola tem o maior respeito por sua antiga mestre, e Y'shtola tenta evitar desrespeitá-la. Y'shtola também é naturalmente cínica com pessoas que escondem a verdade e suas intenções. Ela rapidamente perdeu a confiança do Exarca de Cristal logo após ser convocada para o Primeiro devido à sua natureza secreta, e tentou evitar a calamidade à sua maneira, em vez de cooperar com ele. Ela só faz isso mais uma vez depois que o Guerreiro da Luz chegou ao Primeiro.
     <br>
@@ -128,9 +128,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `G'raha Tia`;
+      nome_hero.innerHTML = `G'raha`;
 
-      intro_hero.innerHTML = `<span>Classe: Paladin / White Mage / Black Mage (Omniclasse) <br> G'raha é excêntrico, inicialmente jogando com o Guerreiro da Luz enquanto eles coletam a areia etérea, e caprichosamente nomeando a equipe de investigação combinada em homenagem a um antigo sábio Allagan.
+      intro_hero.innerHTML = `<span>Classe: Paladin / White Mage / Black Mage (Omniclasse) <br> G'raha Tia é excêntrico, inicialmente jogando com o Guerreiro da Luz enquanto eles coletam a areia etérea, e caprichosamente nomeando a equipe de investigação combinada em homenagem a um antigo sábio Allagan.
 
       Como o Exarca de Cristal, apesar de sua aparência jovem, seus maneirismos beiram os de uma figura mais velha e sábia, dando orientação tanto ao povo do Crystarium quanto ao Guerreiro da Luz durante sua estadia no Primeiro. Muitas vezes inspirando aqueles ao seu redor a agir com palavras de encorajamento, ele é um líder eficaz reverenciado pelo povo de Crystarium como uma fonte de sabedoria. Ele é cordial, respeitoso e convidativo com o Guerreiro da Luz, bem como com os outros Scions e se preocupa com sua segurança e saúde durante sua estadia no Primeiro.
       <br>     
@@ -166,7 +166,7 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Tataru Taru`;
+      nome_hero.innerHTML = `Tataru`;
 
       intro_hero.innerHTML = `<span>Tesoureira dos Scions of the Seventh Dawn <br> Tataru Taru poderia ser considerada o membro mais inocente e gentil dos Scions of the Seventh Dawn, sempre disposto a ajudar seus membros com entusiasmo sem limites e um sorriso. Minfilia observou que Tataru costuma ser uma boa juíza de caráter. Apesar de ser hábil como recepcionista e contadora, muitas vezes ela se sente inferior aos outros membros e tenta aprender várias outras profissões, como se tornar mineira e arcanista, embora esses empreendimentos raramente tenham sucesso. No entanto, ela permanece leal aos seus companheiros Scions que a tratam com o maior respeito. Ela se preocupa com a segurança dos Scions e se algum dia os verá novamente. Ela é uma costureira habilidosa e tem afinidade com performance, muitas vezes praticando malabarismo (em um objetivo equivocado de se tornar uma artista de rua), bem como ocasionalmente trabalhando como cantora na taverna de Ishgard, o Cavaleiro Esquecido. Uma missão secundária em Labyrinthos revela que ela tem um potencial inexplorado para se tornar uma força valiosa no campo de batalha devido ao seu Carbúnculo durar em reservas de éter quase indefinidas, quando deveria ter desaparecido há muito tempo.
       <br>
@@ -221,9 +221,9 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `Minfilia Warde`;
+      nome_hero.innerHTML = `Minfilia`;
 
-      intro_hero.innerHTML = `<span>Oráculo da Luz <br> No Final Fantasy XIV original, o título oficial de Minfilia era "Antecedente Atuante" do Caminho dos Doze. Antecedente é sinônimo de “predecessora”, o que implicava que ela era alguém com o Eco que veio antes dos outros, inclusive o aventureiro, e os guiou com a sabedoria da antiguidade. Embora sábios e diplomaticamente experientes, seus possíveis seguidores frequentemente a prejudicavam, incluindo o companheiro de Trilha do aventureiro. Isto mostrou uma falta de formalidade no Caminho dos Doze, bem como uma liderança instável da sua parte, por mais sólidos que os seus ideais pudessem parecer.
+      intro_hero.innerHTML = `<span>Oráculo da Luz <br> No Final Fantasy XIV original, o título oficial de Minfilia Warde era "Antecedente Atuante" do Caminho dos Doze. Antecedente é sinônimo de “predecessora”, o que implicava que ela era alguém com o Eco que veio antes dos outros, inclusive o aventureiro, e os guiou com a sabedoria da antiguidade. Embora sábios e diplomaticamente experientes, seus possíveis seguidores frequentemente a prejudicavam, incluindo o companheiro de Trilha do aventureiro. Isto mostrou uma falta de formalidade no Caminho dos Doze, bem como uma liderança instável da sua parte, por mais sólidos que os seus ideais pudessem parecer.
       <br>
       Cinco anos após a Calamidade, Minfilia recebe mais respeito como líder dos Scions of the Seventh Dawn, particularmente por seus pares no Círculo do Conhecimento. Ela está mais alegre agora que não precisa manter a organização em segredo, embora não esteja indiferente à gravidade do conflito crescente. Minfilia é calorosa e acolhedora com o aventureiro.</span>`;
 

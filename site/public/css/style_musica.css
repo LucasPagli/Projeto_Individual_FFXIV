@@ -81,6 +81,10 @@
       top: 0;
       width: 100%;
     }
+
+    .logado {
+      display: none !important;
+    }
   
     /* Responsividade */
     
@@ -242,7 +246,7 @@
         height: 12.5%;
       }
 
-      #fight .partyPixel #firstMember {
+      #fight .partyPixel #firstMemberPixel {
         position: absolute;
         top: 41vh;
         left: 49vw;
@@ -250,7 +254,7 @@
         height: 30%;
       }
 
-      #fight .partyPixel #secondMember {
+      #fight .partyPixel #secondMemberPixel {
         position: absolute;
         top: 45vh;
         left: 54vw;
@@ -258,7 +262,7 @@
         height: 30%;
       }
 
-      #fight .partyPixel #thirdMember {
+      #fight .partyPixel #thirdMemberPixel {
         position: absolute;
         top: 49vh;
         left: 59vw;

@@ -6,10 +6,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/style_musica.css">
   <link rel="shortcut icon" type="imagex/png" href="imagens/FF_Logo.ico">
+  <script src="./js/bosses.js"></script>
   <title>Música</title>
 </head>
 
-<body>
+<body onload="logadoOrNot(), criarContadorMusica(), verificarParty(), verificarWoL()">
 
   <div class="topnav sticky" id="myTopnav">
     <img src="imagens/FF_Logo.png" alt="Logo">
@@ -29,11 +30,18 @@
       <div class="skewed">Músicas</div>
     </a>
 
-    <a href="login.html" class="nav-right">
+    <a href="login.html" class="nav-right" id="navLogin">
       <div class="skewed">Login</div>
     </a>
-    <a href="cadastro.html" class="nav-right active">
+    <a href="cadastro.html" class="nav-right active" id="navCadastro">
       <div class="skewed">Cadastro</div>
+    </a>
+
+    <a href="index.html" onclick="deslogar()" class="nav-right logado" id="navSair">
+      <div class="skewed">Sair</div>
+    </a>
+    <a href="cadastro.html" class="nav-right logado active" id="navPerfil">
+      <div class="skewed">Perfil</div>
     </a>
 
     <a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
@@ -44,12 +52,12 @@
   <div class="bgimg-1" id="home_scroll">
 
     <div id="mySidenav" class="sidenav">
-      <a onclick="playMusic('./musicas/AlexanderPrime_theme.mp3')" id="boss1">Alexander</a>
-      <a onclick="playMusic('./musicas/Titan_theme.mp3')" id="boss2">Titan</a>
-      <a onclick="playMusic('./musicas/Garuda_theme.mp3')" id="boss3">Garuda</a>
-      <a onclick="playMusic('./musicas/Ultima_theme.mp3')" id="boss4">Ultima</a>
-      <a onclick="playMusic('./musicas/Shiva_theme.mp3')" id="boss5">Shiva</a>
-      <a onclick="playMusic('./musicas/Nidhogg_theme.mp3')" id="boss6">Nidhogg</a>
+      <a onclick="playMusic('./musicas/AlexanderPrime_theme.mp3'), contarMusica('./musicas/AlexanderPrime_theme.mp3'), Alex()" id="boss1">Alexander</a>
+      <a onclick="playMusic('./musicas/Titan_theme.mp3'), contarMusica('./musicas/Titan_theme.mp3'), Titan()" id="boss2">Titan</a>
+      <a onclick="playMusic('./musicas/Garuda_theme.mp3'), contarMusica('./musicas/Garuda_theme.mp3'), Garuda()" id="boss3">Garuda</a>
+      <a onclick="playMusic('./musicas/Ultima_theme.mp3'), contarMusica('./musicas/Ultima_theme.mp3'), Ultima()" id="boss4">Ultima</a>
+      <a onclick="playMusic('./musicas/Shiva_theme.mp3'), contarMusica('./musicas/Shiva_theme.mp3'), Shiva()" id="boss5">Shiva</a>
+      <a onclick="playMusic('./musicas/Nidhogg_theme.mp3'), contarMusica('./musicas/Nidhogg_theme.mp3'), Nidhogg()" id="boss6">Nidhogg</a>
     </div>
 
     <div id="fight">
@@ -57,10 +65,10 @@
         <img src="./imagens/Alexander.png">
       </div>
       <div class="partyPixel" id="party">
-        <img src="./imagens/Warrior_pixel.png" id="WoL">
-        <img src="./imagens/Alisae_pixel.png" id="firstMember">
-        <img src="./imagens/Alphinaud_pixel.png" id="secondMember">
-        <img src="./imagens/Estinien_pixel.png" id="thirdMember">
+        <img src="./imagens/100_pixel.png" id="WoL">
+        <img src="./imagens/Alisaie_pixel.png" id="firstMemberPixel">
+        <img src="./imagens/Alphinaud_pixel.png" id="secondMemberPixel">
+        <img src="./imagens/Estinien_pixel.png" id="thirdMemberPixel">
       </div>
     </div>
 
@@ -78,6 +86,34 @@
 </html>
 
 <script>
+
+  var bossPixelArt = document.getElementById("boss");
+
+  function logadoOrNot() {
+    const loginNavbar = document.getElementById("navLogin");
+    const cadastroNavbar = document.getElementById("navCadastro");
+    const sairNavbar = document.getElementById("navSair");
+    const perfilNavbar = document.getElementById("navPerfil");
+    const sideNavbar = document.getElementById("mySidenav");
+
+    if (sessionStorage.length == 0) {
+      loginNavbar.classList.remove("logado");
+      cadastroNavbar.classList.remove("logado");
+      sairNavbar.classList.add("logado");
+      perfilNavbar.classList.add("logado");
+      sideNavbar.classList.add("logado");
+    } else {
+      loginNavbar.classList.add("logado");
+      cadastroNavbar.classList.add("logado");
+      sairNavbar.classList.remove("logado");
+      perfilNavbar.classList.remove("logado");
+      sideNavbar.classList.remove("logado");
+    }
+  }
+
+  function deslogar() {
+    sessionStorage.clear();
+  }
 
   /* Função para responsividade do topnav */
   function myResponsiveFunction() {
@@ -114,6 +150,177 @@
 
   function setVolume(volume) {
     audioElement.volume = volume;
+  }
+
+  function criarContadorMusica() {
+        // aguardar();
+        var idUser = sessionStorage.ID_USUARIO;
+        var fkMusicaAlex = 1;
+        var fkMusicaTitan = 2;
+        var fkMusicaGaruda = 3;
+        var fkMusicaUltima = 4;
+        var fkMusicaShiva = 5;
+        var fkMusicaNidhogg = 6;
+
+
+        // Enviando o valor da nova input
+        fetch("/musica/criarContadorMusica", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                idServer: idUser,
+                fkAlexServer: fkMusicaAlex,
+                fkTitanServer: fkMusicaTitan,
+                fkGarudaServer: fkMusicaGaruda,
+                fkUltimaServer: fkMusicaUltima,
+                fkShivaServer: fkMusicaShiva,
+                fkNidhoggServer: fkMusicaNidhogg,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    //   cardErro.style.display = "block";
+
+                    //   mensagem_erro.innerHTML =
+                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+                      console.log("Deu bom criando o contador")
+                    }, "2000");
+
+                    //   limparFormulario();
+                    //   finalizarAguardar();
+                } else {
+                    throw  console.log("Tá tudo bem, o usuário só já possui um contador de músicas!");
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+
+        return false;
+    }
+
+    function contarMusica(audioSrc) {
+        // aguardar();
+        var id2User = sessionStorage.ID_USUARIO;
+        if (audioSrc == './musicas/AlexanderPrime_theme.mp3') {
+          var fkMusicEscutada = 1;
+
+        } else if (audioSrc == './musicas/Titan_theme.mp3') {
+          var fkMusicEscutada = 2;
+
+        } else if (audioSrc == './musicas/Garuda_theme.mp3') {
+          var fkMusicEscutada = 3;
+
+        } else if (audioSrc == './musicas/Ultima_theme.mp3') {
+          var fkMusicEscutada = 4;
+          
+        } else if (audioSrc == './musicas/Shiva_theme.mp3') {
+          var fkMusicEscutada = 5;
+          
+        } else if (audioSrc == './musicas/Nidhogg_theme.mp3') {
+          var fkMusicEscutada = 6; 
+        } 
+
+        // Enviando o valor da nova input
+        fetch("/musica/contarMusica", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                fkMusicEscutadaServer: fkMusicEscutada,
+                id2Server: id2User
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    //   cardErro.style.display = "block";
+
+                    //   mensagem_erro.innerHTML =
+                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+                      console.log(`Música contada com sucesso`);
+                    }, "2000");
+
+                    //   limparFormulario();
+                    //   finalizarAguardar();
+                } else {
+                    throw console.log("Houve um erro ao tentar contar a música!");
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+
+        return false;
+    }
+
+    const WoLPartyMember = document.getElementById("WoL");
+    const FirstPartyMember = document.getElementById("firstMemberPixel");
+    const SecondPartyMember = document.getElementById("secondMemberPixel");
+    const ThirdPartyMember = document.getElementById("thirdMemberPixel");
+
+    function verificarParty() {
+      var id3User = sessionStorage.ID_USUARIO;
+    fetch("/musica/verificarParty" + id3User, {
+      method: "GET",
+      headers: {
+                "Content-Type": "application/json",
+            }
+    })
+      .then(function (resposta) {
+        
+        resposta.json().then(resposta => {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+          console.log(resposta);
+          resposta.forEach((party) => {
+            FirstPartyMember.src = `./imagens/${party.firstMember}_pixel.png`;
+            SecondPartyMember.src = `./imagens/${party.secondMember}_pixel.png`;
+            ThirdPartyMember.src = `./imagens/${party.thirdMember}_pixel.png`;
+          })
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+    }
+
+    function verificarWoL() {
+      var id4User = sessionStorage.ID_USUARIO;
+    fetch("/musica/verificarWoL" + id4User, {
+      method: "GET",
+      headers: {
+                "Content-Type": "application/json",
+            }
+    })
+      .then(function (resposta) {
+        
+        resposta.json().then(resposta => {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+          console.log(resposta);
+          resposta.forEach((usuario) => {
+            WoLPartyMember.src = `./imagens/${usuario.fkClasse}_pixel.png`;
+          })
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
   }
 
 </script>

@@ -10,7 +10,7 @@
     <title>Cadastro</title>
 </head>
 
-<body>
+<body onload="logadoOrNot()">
 
     <div class="topnav sticky" id="myTopnav">
         <img src="imagens/FF_Logo.png" alt="Logo">
@@ -30,12 +30,19 @@
             <div class="skewed">Músicas</div>
         </a>
 
-        <a href="login.html" class="nav-right">
+        <a href="login.html" class="nav-right" id="navLogin">
             <div class="skewed">Login</div>
-        </a>
-        <a href="cadastro.html" class="nav-right active">
+          </a>
+          <a href="cadastro.html" class="nav-right active" id="navCadastro">
             <div class="skewed">Cadastro</div>
-        </a>
+          </a>
+      
+          <a href="index.html" onclick="deslogar()" class="nav-right logado" id="navSair">
+            <div class="skewed">Sair</div>
+          </a>
+          <a href="cadastro.html" class="nav-right logado active" id="navPerfil">
+            <div class="skewed">Perfil</div>
+          </a>
 
         <a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
             <i class="fa fa-bars"></i>
@@ -91,6 +98,32 @@
 </html>
 
 <script>
+
+function logadoOrNot() {
+    const loginNavbar = document.getElementById("navLogin");
+    const cadastroNavbar = document.getElementById("navCadastro");
+    const sairNavbar = document.getElementById("navSair");
+    const perfilNavbar = document.getElementById("navPerfil");
+    const sideNavbar = document.getElementById("mySidenav");
+
+    if (sessionStorage.length == 0) {
+      loginNavbar.classList.remove("logado");
+      cadastroNavbar.classList.remove("logado");
+      sairNavbar.classList.add("logado");
+      perfilNavbar.classList.add("logado");
+      sideNavbar.classList.add("logado");
+    } else {
+      loginNavbar.classList.add("logado");
+      cadastroNavbar.classList.add("logado");
+      sairNavbar.classList.remove("logado");
+      perfilNavbar.classList.remove("logado");
+      sideNavbar.classList.remove("logado");
+    }
+  }
+
+  function deslogar() {
+    sessionStorage.clear();
+  }
 
     /* Troca de classe pra animação de troca de login/cadastro */
     const signUpButton = document.getElementById('signUp');
