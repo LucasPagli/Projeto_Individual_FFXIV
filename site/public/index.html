@@ -27,7 +27,7 @@
     <a href="#classes" onclick="ClassesScroll()">
       <div class="skewed">Classes</div>
     </a>
-    <a href="musica.html">
+    <a href="musica.html" class="logado" id="navMusica">
       <div class="skewed">Músicas</div>
     </a>
 
@@ -336,6 +336,7 @@
     const perfilNavbar = document.getElementById("navPerfil");
     const sideNavbar = document.getElementById("mySidenav");
     const sideClasseNavbar = document.getElementById("mySidenavClasse");
+    const musicaNavbar = document.getElementById("navMusica");
 
     if (sessionStorage.length == 0) {
       loginNavbar.classList.remove("logado");
@@ -344,6 +345,7 @@
       perfilNavbar.classList.add("logado");
       sideNavbar.classList.add("logado");
       sideClasseNavbar.classList.add("logado");
+      musicaNavbar.classList.add("logado");
     } else {
       loginNavbar.classList.add("logado");
       cadastroNavbar.classList.add("logado");
@@ -351,6 +353,7 @@
       perfilNavbar.classList.remove("logado");
       sideNavbar.classList.remove("logado");
       sideClasseNavbar.classList.remove("logado");
+      musicaNavbar.classList.remove("logado");
     }
   }
 

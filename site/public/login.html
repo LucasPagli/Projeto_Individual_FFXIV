@@ -26,7 +26,7 @@
         <a href="index.html#classes_scroll">
             <div class="skewed">Classes</div>
         </a>
-        <a href="musica.html">
+        <a href="musica.html" class="logado" id="navMusica">
             <div class="skewed">Músicas</div>
         </a>
 
@@ -72,7 +72,7 @@
                 <h1>Login</h1>
                 <input type="email" id="email_login" placeholder="Email" required />
                 <input type="password" id="password_login" placeholder="Senha" required />
-                <a href="#">Esqueceu sua senha?</a>
+                
                 <button type="submit">Logar</button>
             </form>
         </div>
@@ -104,17 +104,20 @@ function logadoOrNot() {
     const cadastroNavbar = document.getElementById("navCadastro");
     const sairNavbar = document.getElementById("navSair");
     const perfilNavbar = document.getElementById("navPerfil");
+    const musicaNavbar = document.getElementById("navMusica");
 
     if (sessionStorage.length == 0) {
       loginNavbar.classList.remove("logado");
       cadastroNavbar.classList.remove("logado");
       sairNavbar.classList.add("logado");
       perfilNavbar.classList.add("logado");
+      musicaNavbar.classList.add("logado");
     } else {
       loginNavbar.classList.add("logado");
       cadastroNavbar.classList.add("logado");
       sairNavbar.classList.remove("logado");
       perfilNavbar.classList.remove("logado");
+      musicaNavbar.classList.remove("logado");
     }
   }
 

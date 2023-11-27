@@ -11,7 +11,9 @@ senha varchar(45)
 
 select * from usuario;
 
-select fkUsuario from party join usuario on fkUsuario = idUsuario;
+select count(fkClasse) as qtdClasse from usuario where fkClasse = 100;
+
+select count(fkClasse) as qtdTotal from usuario;
 
 create table classe (
 idClasse int primary key auto_increment,
