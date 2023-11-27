@@ -40,7 +40,7 @@
           <a href="index.html" onclick="deslogar()" class="nav-right logado" id="navSair">
             <div class="skewed">Sair</div>
           </a>
-          <a href="cadastro.html" class="nav-right logado active" id="navPerfil">
+          <a href="perfil.html" class="nav-right logado active" id="navPerfil">
             <div class="skewed">Perfil</div>
           </a>
 
@@ -104,20 +104,17 @@ function logadoOrNot() {
     const cadastroNavbar = document.getElementById("navCadastro");
     const sairNavbar = document.getElementById("navSair");
     const perfilNavbar = document.getElementById("navPerfil");
-    const sideNavbar = document.getElementById("mySidenav");
 
     if (sessionStorage.length == 0) {
       loginNavbar.classList.remove("logado");
       cadastroNavbar.classList.remove("logado");
       sairNavbar.classList.add("logado");
       perfilNavbar.classList.add("logado");
-      sideNavbar.classList.add("logado");
     } else {
       loginNavbar.classList.add("logado");
       cadastroNavbar.classList.add("logado");
       sairNavbar.classList.remove("logado");
       perfilNavbar.classList.remove("logado");
-      sideNavbar.classList.remove("logado");
     }
   }
 
@@ -237,7 +234,6 @@ function logadoOrNot() {
                     sessionStorage.ID_USUARIO = json.idUsuario;
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.username;
-                    // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
                         window.location = "index.html";

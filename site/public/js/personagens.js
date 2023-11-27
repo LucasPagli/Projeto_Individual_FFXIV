@@ -50,7 +50,7 @@
       setTimeout(SlideRemove, 3000)
     }
 
-    nome_hero.innerHTML = `Y'shtola`;
+    nome_hero.innerHTML = `Yshtola`;
 
     intro_hero.innerHTML = `<span>Classe: Black Mage (DPS) <br> Y'shtola Rhul é apresentada como "Conjuradora Cultuada", um apelido que reflete sua compostura calma. Ela é uma voz da razão taciturna e bem falada, mesmo ao lado de seus pares igualmente acadêmicos entre os Scions of the Seventh Dawn, fornecendo uma visão nítida e relevante que dificilmente se desvia do assunto em questão. Isso contrasta com Thancred Waters, que frequentemente lança frases carismáticas e extravagantes para ser desviada por seu estoicismo.
     <br>
@@ -128,7 +128,7 @@
         setTimeout(SlideRemove, 3000)
       }
 
-      nome_hero.innerHTML = `G'raha`;
+      nome_hero.innerHTML = `Graha`;
 
       intro_hero.innerHTML = `<span>Classe: Paladin / White Mage / Black Mage (Omniclasse) <br> G'raha Tia é excêntrico, inicialmente jogando com o Guerreiro da Luz enquanto eles coletam a areia etérea, e caprichosamente nomeando a equipe de investigação combinada em homenagem a um antigo sábio Allagan.
 

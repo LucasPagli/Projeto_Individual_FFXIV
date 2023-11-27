@@ -12,7 +12,7 @@ var indexRouter = require("./src/routes/index");
 var cadastroRouter = require("./src/routes/cadastro");
 var loginRouter = require("./src/routes/login");
 var musicaRouter = require("./src/routes/musica");
-// var aquariosRouter = require("./src/routes/aquarios");
+var perfilRouter = require("./src/routes/perfil");
 // var empresasRouter = require("./src/routes/empresas");
 
 app.use(express.json());
@@ -28,6 +28,7 @@ app.use("/registrarClasseFav", indexRouter);
 app.use("/cadastro", cadastroRouter);
 app.use("/login", loginRouter);
 app.use("/musica", musicaRouter);
+app.use("/perfil", perfilRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

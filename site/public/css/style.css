@@ -214,7 +214,7 @@
     min-height: 100vh;
   }
 
-  .caption span.title {
+  .caption span.title, .caption span.TYtitle {
     color: #fff;
     text-shadow: 5px 5px 5px black;
     padding: 18px;
@@ -734,4 +734,33 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+
+  /* Thank You */
+
+  .caption .TYtitle {
+    position: absolute;
+    left: 0;
+    top: -40vh;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+
+  .bgimg-1 #YoshiP, .bgimg-1 #Soken, .bgimg-1 #Ishikawa {
+    position: absolute;
+    height: 40vh;
+    top: 40vh;
+  }
+
+  .bgimg-1 #YoshiP {
+    left: 5vw;
+  }
+
+  .bgimg-1 #Soken {
+    left: 40vw;
+  }
+
+  .bgimg-1 #Ishikawa {
+    left: 75vw;
   }

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style_perfil.css">
+    <link rel="shortcut icon" type="imagex/png" href="imagens/FF_Logo.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Perfil</title>
+</head>
+<body onload="logadoOrNot(), obterDadosGraficoMusica(), obterDadosGraficoClasse(), WoLPixelArt()">
+
+    <div class="topnav sticky" id="myTopnav">
+        <img src="imagens/FF_Logo.png" alt="Logo">
+        <a href="index.html">
+            <div class="skewed">Home</div>
+        </a>
+        <a href="index.html#personagens_scroll">
+            <div class="skewed">Personagens</div>
+        </a>
+        <a href="index.html#expansoes_scroll">
+            <div class="skewed">Expansões</div>
+        </a>
+        <a href="index.html#classes_scroll">
+            <div class="skewed">Classes</div>
+        </a>
+        <a href="musica.html">
+            <div class="skewed">Músicas</div>
+        </a>
+
+        <a href="login.html" class="nav-right" id="navLogin">
+            <div class="skewed">Login</div>
+          </a>
+          <a href="cadastro.html" class="nav-right active" id="navCadastro">
+            <div class="skewed">Cadastro</div>
+          </a>
+      
+          <a href="index.html" onclick="deslogar()" class="nav-right logado" id="navSair">
+            <div class="skewed">Sair</div>
+          </a>
+          <a href="perfil.html" class="nav-right logado active" id="navPerfil">
+            <div class="skewed">Perfil</div>
+          </a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myResponsiveFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div id="chartBg">
+        <canvas id="myChart"></canvas>
+        <div id="ClasseCount" class="section_info_light">
+            <p id="ClasseText" class="section_text_light">
+            Sua classe favorita também é a favorita de <span class="destaque_light"></span> outros Warriors of Light!
+            Vocês equivalem à <span class="destaque_light"></span> dos usuários desse site!
+            </p>
+          </div>
+    </div>
+
+    <div id="WoLPixelDiv">
+        <img id="WoLPixel" src="./imagens/100_pixel.png">
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+const WoL = document.getElementById("WoLPixel");
+
+function WoLPixelArt() {
+    var ClasseWoL = sessionStorage.FK_CLASSE;
+
+    if (ClasseWoL == 100) {
+        WoL.src = `./imagens/100_pixel.png`;
+
+    } else if (ClasseWoL == 101) {
+        WoL.src = `./imagens/101_pixel.png`;
+
+    } else if (ClasseWoL == 102) {
+        WoL.src = `./imagens/102_pixel.png`;
+
+    } else if (ClasseWoL == 103) {
+        WoL.src = `./imagens/103_pixel.png`;
+
+    } else if (ClasseWoL == 104) {
+        WoL.src = `./imagens/104_pixel.png`;
+
+    } else if (ClasseWoL == 105) {
+        WoL.src = `./imagens/105_pixel.png`;
+
+    } else if (ClasseWoL == 106) {
+        WoL.src = `./imagens/106_pixel.png`;
+
+    } else if (ClasseWoL == 107) {
+        WoL.src = `./imagens/107_pixel.png`;
+
+    } else if (ClasseWoL == 108) {
+        WoL.src = `./imagens/108_pixel.png`;
+
+    } else if (ClasseWoL == 109) {
+        WoL.src = `./imagens/109_pixel.png`;
+
+    } else if (ClasseWoL == 110) {
+        WoL.src = `./imagens/110_pixel.png`;
+
+    } else if (ClasseWoL == 111) {
+        WoL.src = `./imagens/111_pixel.png`;
+
+    } else if (ClasseWoL == 112) {
+        WoL.src = `./imagens/112_pixel.png`;
+
+    } else if (ClasseWoL == 113) {
+        WoL.src = `./imagens/113_pixel.png`;
+
+    } else if (ClasseWoL == 114) {
+        WoL.src = `./imagens/114_pixel.png`;
+
+    } else if (ClasseWoL == 115) {
+        WoL.src = `./imagens/115_pixel.png`;
+
+    } else if (ClasseWoL == 116) {
+        WoL.src = `./imagens/116_pixel.png`;
+
+    } else if (ClasseWoL == 117) {
+        WoL.src = `./imagens/117_pixel.png`;
+
+    } else if (ClasseWoL == 118) {
+        WoL.src = `./imagens/118_pixel.png`;
+    }
+}
+
+function logadoOrNot() {
+    const loginNavbar = document.getElementById("navLogin");
+    const cadastroNavbar = document.getElementById("navCadastro");
+    const sairNavbar = document.getElementById("navSair");
+    const perfilNavbar = document.getElementById("navPerfil");
+
+    if (sessionStorage.length == 0) {
+      loginNavbar.classList.remove("logado");
+      cadastroNavbar.classList.remove("logado");
+      sairNavbar.classList.add("logado");
+      perfilNavbar.classList.add("logado");
+    } else {
+      loginNavbar.classList.add("logado");
+      cadastroNavbar.classList.add("logado");
+      sairNavbar.classList.remove("logado");
+      perfilNavbar.classList.remove("logado");
+    }
+  }
+
+  function deslogar() {
+    sessionStorage.clear();
+  }
+
+  /* Função para responsividade do topnav */
+  function myResponsiveFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav sticky") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav sticky";
+        }
+    }
+
+    function obterDadosGraficoMusica() {
+    var idUser = sessionStorage.ID_USUARIO;
+
+    fetch("/perfil/obterDadosGraficoMusica" + idUser, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+    }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao buscar os dados');
+        }
+        return response.json(); // Esta linha é essencial para extrair o corpo da resposta
+    })
+    .then(data => {
+        // Ao utilizar then(data => { ... }), você está basicamente dizendo: "Quando os dados forem recebidos com sucesso do servidor, execute esta função e utilize esses dados dentro deste bloco de código." 
+
+        const ctx = document.getElementById('myChart');
+
+        const Musicas = [
+            'Alexander', 'Titan', 'Garuda', 'Ultima', 'Shiva', 'Nidhogg'
+        ];
+
+
+        const labels = data.map(item => Musicas[item.fkMusica - 1]);
+        const dados = data.map(item => item.vezesEscutada);
+
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Vezes que a música foi escutada',
+                    data: dados,
+                    backgroundColor: 'rgb(78,160,228)',
+                    borderColor: 'rgb(43, 146, 230)',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => {
+        console.error('Ocorreu um erro no gráfico:', error);
+    });
+}
+
+    function obterDadosGraficoClasse() {
+        var ClasseWoL = sessionStorage.FK_CLASSE;
+        var NomeWoL = sessionStorage.NOME_USUARIO;
+        var CountText = document.getElementById("ClasseText");
+
+    fetch("/perfil/obterDadosGraficoClasse" + ClasseWoL, {
+      method: "GET",
+      headers: {
+                "Content-Type": "application/json",
+            }
+    })
+      .then(function (resposta) {
+        
+        resposta.json().then(resposta => {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+          console.log(resposta);
+          resposta.forEach((usuario) => {
+            CountText.innerHTML = `${NomeWoL} sua classe favorita também é a favorita de <span class="destaque_light">${usuario.qtdClasse}</span> outro(s) Warriors of Light!`;
+            obterDadosClassesTotal();
+          })
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+
+  function obterDadosClassesTotal() {
+        var CountText = document.getElementById("ClasseText");
+
+    fetch("/perfil/obterDadosClassesTotal", {
+      method: "GET",
+      headers: {
+                "Content-Type": "application/json",
+            }
+    })
+      .then(function (resposta) {
+        
+        resposta.json().then(resposta => {
+          console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+          console.log(resposta);
+          resposta.forEach((usuario) => {
+            CountText.innerHTML += `<br>
+            De um total de <span class="destaque_light">${usuario.qtdTotal}</span> usuários desse site!`;
+          })
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+
+</script>

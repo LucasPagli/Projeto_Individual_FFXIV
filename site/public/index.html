@@ -41,7 +41,7 @@
     <a href="index.html" onclick="deslogar()" class="nav-right logado" id="navSair">
       <div class="skewed">Sair</div>
     </a>
-    <a href="cadastro.html" class="nav-right logado active" id="navPerfil">
+    <a href="perfil.html" class="nav-right logado active" id="navPerfil">
       <div class="skewed">Perfil</div>
     </a>
 
@@ -64,8 +64,8 @@
         Estes personagens irão ser seus <span class="destaque_light">principais aliados</span> pelas árduas jornadas à
         frente, conheça um pouco mais sobre estes bravos <span class="destaque_light">guerreiros da luz</span> que
         estarão ao seu lado até nas noites mais escuras e desesperadoras! Além disso, se <span
-          class="destaque_light">cadastre para selecionar até 3 de seus heróis favoritos para te acompanharem</span> ao
-        escutar as belas músicas deste mundo!</p>
+          class="destaque_light">cadastre para criar uma party e então selecionar até 3 de seus heróis favoritos para te acompanharem</span> ao
+        escutar as belas músicas deste mundo! Após criar a party e selecionar seus companheiros, não esqueça de registra-los!</p>
     </div>
 
     <div class="bgimg-2" id="personagens_scroll">
@@ -114,7 +114,8 @@
         entre luz e escuridão, e como o seu Guerreiro da Luz, o escolhido de Hydaelyn, mantém a chama da esperança viva
         enquanto <span class="destaque_light">defende Eorzea</span> de inúmeras ameaças! As expansões conseguem contar
         <span class="destaque_light">histórias ricas</span> de detalhes que se interligam na grande narrativa do jogo,
-        enquanto você <span class="destaque_light">explora</span> novas regiões e conhece seus residentes.</p>
+        enquanto você <span class="destaque_light">explora</span> novas regiões e conhece seus residentes.
+      </p>
     </div>
 
     <div class="bgimg-3" id="expansoes_scroll">
@@ -217,7 +218,7 @@
           dano ao inimigo,</span> seja tal especialidade de combate corpo a corpo, à distância ou por meio de mágicas,
         alguns até mesmo focados em fortalecer seus aliados para aumentar o dano em conjunto! <br> <span
           class="destaque_light">Ao se cadastrar você pode selecionar sua classe favorita para personalizar seu
-          aventureiro escutando músicas no site!</span></p>
+          aventureiro escutando músicas no site! Clique no ícone da sua classe favorita e após isso clique no botão do canto inferior direito para registrar ela!</span></p>
     </div>
 
     <div class="bgimg-4" id="classes_scroll">
@@ -228,29 +229,48 @@
       </video>
 
       <div class="classes_portraits">
-        <div class="job_portrait"> <img src="imagens/Warrior.png" id="WarJob" alt="Warrior" onclick="WAR(), WarFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Paladin.png" id="PldJob" alt="Paladin" onclick="PLD(), PldFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/DarkKnight.png" id="DrkJob" alt="Dark Knight" onclick="DRK(), DrkFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Gunbreaker.png" id="GnbJob" alt="Gunbreaker" onclick="GNB(), GnbFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Warrior.png" id="WarJob" alt="Warrior"
+            onclick="WAR(), WarFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Paladin.png" id="PldJob" alt="Paladin"
+            onclick="PLD(), PldFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/DarkKnight.png" id="DrkJob" alt="Dark Knight"
+            onclick="DRK(), DrkFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Gunbreaker.png" id="GnbJob" alt="Gunbreaker"
+            onclick="GNB(), GnbFavorito()"></div>
 
-        <div class="job_portrait"> <img src="imagens/WhiteMage.png" id="WhmJob" alt="White Mage" onclick="WHM(), WhmFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Scholar.png" id="SchJob" alt="Scholar" onclick="SCH(), SchFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Astrologian.png" id="AstJob" alt="Astrologian" onclick="AST(), AstFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Sage.png" id="SgeJob" alt="Sage" onclick="SGE(), SgeFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/WhiteMage.png" id="WhmJob" alt="White Mage"
+            onclick="WHM(), WhmFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Scholar.png" id="SchJob" alt="Scholar"
+            onclick="SCH(), SchFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Astrologian.png" id="AstJob" alt="Astrologian"
+            onclick="AST(), AstFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Sage.png" id="SgeJob" alt="Sage" onclick="SGE(), SgeFavorito()">
+        </div>
 
-        <div class="job_portrait"> <img src="imagens/Monk.png" id="MnkJob" alt="Monk" onclick="MNK(), MnkFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Dragoon.png" id="DrgJob" alt="Dragoon" onclick="DRG(), DrgFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Ninja.png" id="NinJob" alt="Ninja" onclick="NIN(), NinFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Samurai.png" id="SamJob" alt="Samurai" onclick="SAM(), SamFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Reaper.png" id="RprJob" alt="Reaper" onclick="RPR(), RprFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Monk.png" id="MnkJob" alt="Monk" onclick="MNK(), MnkFavorito()">
+        </div>
+        <div class="job_portrait"> <img src="imagens/Dragoon.png" id="DrgJob" alt="Dragoon"
+            onclick="DRG(), DrgFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Ninja.png" id="NinJob" alt="Ninja" onclick="NIN(), NinFavorito()">
+        </div>
+        <div class="job_portrait"> <img src="imagens/Samurai.png" id="SamJob" alt="Samurai"
+            onclick="SAM(), SamFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Reaper.png" id="RprJob" alt="Reaper"
+            onclick="RPR(), RprFavorito()"></div>
 
-        <div class="job_portrait"> <img src="imagens/Bard.png" id="BrdJob" alt="Bard" onclick="BRD(), BrdFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Machinist.png" id="MchJob" alt="Machinist" onclick="MCH(), MchFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Dancer.png" id="DncJob" alt="Dancer" onclick="DNC(), DncFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Bard.png" id="BrdJob" alt="Bard" onclick="BRD(), BrdFavorito()">
+        </div>
+        <div class="job_portrait"> <img src="imagens/Machinist.png" id="MchJob" alt="Machinist"
+            onclick="MCH(), MchFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Dancer.png" id="DncJob" alt="Dancer"
+            onclick="DNC(), DncFavorito()"></div>
 
-        <div class="job_portrait"> <img src="imagens/BlackMage.png" id="BlmJob" alt="Black Mage" onclick="BLM(), BlmFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/Summoner.png" id="SmnJob" alt="Summoner" onclick="SMN(), SmnFavorito()"></div>
-        <div class="job_portrait"> <img src="imagens/RedMage.png" id="RdmJob" alt="Red Mage" onclick="RDM(), RdmFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/BlackMage.png" id="BlmJob" alt="Black Mage"
+            onclick="BLM(), BlmFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/Summoner.png" id="SmnJob" alt="Summoner"
+            onclick="SMN(), SmnFavorito()"></div>
+        <div class="job_portrait"> <img src="imagens/RedMage.png" id="RdmJob" alt="Red Mage"
+            onclick="RDM(), RdmFavorito()"></div>
       </div>
 
       <div class="job_intro" id="intro_classe">
@@ -269,6 +289,20 @@
 
       <button id="myBtn" onclick="myButton()">Pause</button>
 
+    </div>
+
+    <div class="section_info_light">
+      <span class="section_title_light">Do fundo do meu coração, muito obrigado!</span>
+      <p class="section_text_light">Muito obrigado <span class="destaque_light">Yoshida, Soken e Ishikawa</span> por tornar esse jogo no que ele se tornou hoje, por ter acolhido inúmeras pessoas pelo mundo todo com suas histórias intrigantes e músicas cativantes, Final Fantasy XIV foi, continua sendo e continuará sendo um marco na minha vida que eu jamais vou esquecer!</p>
+    </div>
+
+    <div class="bgimg-1">
+      <div class="caption">
+        <span class="TYtitle">MUITO OBRIGADO POR TUDO!</span>
+      </div>
+      <img src="./imagens/Yoshida.png" id="YoshiP">
+      <img src="./imagens/Soken.png" id="Soken">
+      <img src="./imagens/Ishikawa.png" id="Ishikawa">
     </div>
   </main>
 
@@ -352,7 +386,7 @@
 
   function selecionarFavorito3() {
     let nomeText = document.getElementById("nome_hero").innerText;
-    
+
     if (nomeText == "Warrior of Light") {
       alert(`Você não pode selecionar o Warrior of Light como um companheiro! Lembre-se, você é o protagonista!`);
 
@@ -363,282 +397,283 @@
   }
 
   function criarParty() {
-        // aguardar();
-        var idUser = sessionStorage.ID_USUARIO;
+    // aguardar();
+    var idUser = sessionStorage.ID_USUARIO;
 
-        // Enviando o valor da nova input
-        fetch("/criarParty", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                idServer: idUser
-            }),
-        })
-            .then(function (resposta) {
-                console.log("resposta: ", resposta);
+    // Enviando o valor da nova input
+    fetch("/criarParty", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: idUser
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
 
-                if (resposta.ok) {
-                    //   cardErro.style.display = "block";
+        if (resposta.ok) {
+          //   cardErro.style.display = "block";
 
-                    //   mensagem_erro.innerHTML =
-                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          //   mensagem_erro.innerHTML =
+          //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-                    setTimeout(() => {
-                      alert(`Party criada com sucesso! Agora favorite seus 3 companheiros favoritos e registre eles!`);
-                    }, "2000");
+          setTimeout(() => {
+            alert(`Party criada com sucesso! Agora favorite seus 3 companheiros favoritos e registre eles!`);
+          }, "500");
 
-                    //   limparFormulario();
-                    //   finalizarAguardar();
-                } else {
-                    throw alert("Houve um erro ao tentar realizar a criação da sua party! Você só pode ter apenas uma party por vez, então tente registrar party agora!");
-                }
-            })
-            .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-                // finalizarAguardar();
-            });
+          //   limparFormulario();
+          //   finalizarAguardar();
+        } else {
+          throw alert("Houve um erro ao tentar realizar a criação da sua party! Você só pode ter apenas uma party por vez, então tente registrar party agora!");
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
 
-        return false;
-    }
+    return false;
+  }
 
   function gravarParty() {
-        // aguardar();
-        var Fav1User = Favoritos[0];
-        var Fav2User = Favoritos[1];
-        var Fav3User = Favoritos[2];
-        var id2User = sessionStorage.ID_USUARIO;
+    // aguardar();
+    var Fav1User = Favoritos[0];
+    var Fav2User = Favoritos[1];
+    var Fav3User = Favoritos[2];
+    var id2User = sessionStorage.ID_USUARIO;
 
-        // Enviando o valor da nova input
-        fetch("/gravarParty", {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                Fav1Server: Fav1User,
-                Fav2Server: Fav2User,
-                Fav3Server: Fav3User,
-                id2Server: id2User
-            }),
-        })
-            .then(function (resposta) {
-                console.log("resposta: ", resposta);
+    // Enviando o valor da nova input
+    fetch("/gravarParty", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        Fav1Server: Fav1User,
+        Fav2Server: Fav2User,
+        Fav3Server: Fav3User,
+        id2Server: id2User
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
 
-                if (resposta.ok) {
-                    //   cardErro.style.display = "block";
+        if (resposta.ok) {
+          //   cardErro.style.display = "block";
 
-                    //   mensagem_erro.innerHTML =
-                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          //   mensagem_erro.innerHTML =
+          //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-                    setTimeout(() => {
-                      alert(`Party registrada com sucesso! Escolha sua classe favorita ou vá direto para página de Músicas para aproveitar as canções com sua party!`);
-                    }, "500");
+          setTimeout(() => {
+            alert(`Party registrada com sucesso! Escolha sua classe favorita ou vá direto para página de Músicas para aproveitar as canções com sua party!`);
+          }, "500");
 
-                    //   limparFormulario();
-                    //   finalizarAguardar();
-                } else {
-                    throw alert("Houve um erro ao tentar realizar o registro da sua party! Tenha certeza de que todos os 3 heróis tenham sido relacionados!");
-                }
-            })
-            .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-                // finalizarAguardar();
-            });
+          //   limparFormulario();
+          //   finalizarAguardar();
+        } else {
+          throw alert("Houve um erro ao tentar realizar o registro da sua party! Tenha certeza de que todos os 3 heróis tenham sido relacionados!");
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
 
-        return false;
-    }
+    return false;
+  }
 
   var classeFavorita = [];
 
   function WarFavorito() {
     let altText = document.getElementById('WarJob').getAttribute('alt');
 
-      classeFavorita[0] = 100;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 100;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function PldFavorito() {
     let altText = document.getElementById('PldJob').getAttribute('alt');
 
-      classeFavorita[0] = 101;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 101;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function DrkFavorito() {
     let altText = document.getElementById('DrkJob').getAttribute('alt');
 
-      classeFavorita[0] = 102;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 102;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function GnbFavorito() {
     let altText = document.getElementById('GnbJob').getAttribute('alt');
 
-      classeFavorita[0] = 103;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 103;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function WhmFavorito() {
     let altText = document.getElementById('WhmJob').getAttribute('alt');
 
-      classeFavorita[0] = 104;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 104;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function SchFavorito() {
     let altText = document.getElementById('SchJob').getAttribute('alt');
 
-      classeFavorita[0] = 105;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 105;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function AstFavorito() {
     let altText = document.getElementById('AstJob').getAttribute('alt');
 
-      classeFavorita[0] = 106;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 106;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function SgeFavorito() {
     let altText = document.getElementById('SgeJob').getAttribute('alt');
 
-      classeFavorita[0] = 107;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 107;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function MnkFavorito() {
     let altText = document.getElementById('MnkJob').getAttribute('alt');
 
-      classeFavorita[0] = 108;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 108;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function DrgFavorito() {
     let altText = document.getElementById('DrgJob').getAttribute('alt');
 
-      classeFavorita[0] = 109;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 109;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function NinFavorito() {
     let altText = document.getElementById('NinJob').getAttribute('alt');
 
-      classeFavorita[0] = 110;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 110;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function SamFavorito() {
     let altText = document.getElementById('SamJob').getAttribute('alt');
 
-      classeFavorita[0] = 111;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 111;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function RprFavorito() {
     let altText = document.getElementById('RprJob').getAttribute('alt');
 
-      classeFavorita[0] = 112;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 112;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function BrdFavorito() {
     let altText = document.getElementById('BrdJob').getAttribute('alt');
 
-      classeFavorita[0] = 113;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 113;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function MchFavorito() {
     let altText = document.getElementById('MchJob').getAttribute('alt');
 
-      classeFavorita[0] = 114;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 114;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function DncFavorito() {
     let altText = document.getElementById('DncJob').getAttribute('alt');
 
-      classeFavorita[0] = 115;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 115;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function BlmFavorito() {
     let altText = document.getElementById('BlmJob').getAttribute('alt');
 
-      classeFavorita[0] = 116;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 116;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function SmnFavorito() {
     let altText = document.getElementById('SmnJob').getAttribute('alt');
 
-      classeFavorita[0] = 117;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 117;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function RdmFavorito() {
     let altText = document.getElementById('RdmJob').getAttribute('alt');
 
-      classeFavorita[0] = 118;
-      btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
+    classeFavorita[0] = 118;
+    btnClasseFavorita.innerHTML = `Classe Favorita: ${altText}`;
   }
 
   function registrarClasseFav() {
-        // aguardar();
-        var FavJobUser = classeFavorita[0];
-        var id3User = sessionStorage.ID_USUARIO;
+    // aguardar();
+    var FavJobUser = classeFavorita[0];
+    var id3User = sessionStorage.ID_USUARIO;
 
-        if (classeFavorita.length == 0) {
-          alert(`Opa! Você ainda não escolheu sua classe como favorita! Clique em um dos ícones para escolher uma e então tente clicar aqui novamente!`);
-          return
-        }
-
-        // Enviando o valor da nova input
-        fetch("/registrarClasseFav", {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                FavJobServer: FavJobUser,
-                id3Server: id3User
-            }),
-        })
-            .then(function (resposta) {
-                console.log("resposta: ", resposta);
-
-                if (resposta.ok) {
-                    //   cardErro.style.display = "block";
-
-                    //   mensagem_erro.innerHTML =
-                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                    setTimeout(() => {
-                      alert(`Classe registrada com sucesso! Aproveite as músicas usando sua classe favorita!`);
-                      window.location = "musica.html";
-                    }, "500");
-
-                    //   limparFormulario();
-                    //   finalizarAguardar();
-                } else {
-                    throw alert("Houve um erro ao tentar realizar o registro da sua classe!");
-                }
-            })
-            .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-                // finalizarAguardar();
-            });
-
-        return false;
+    if (classeFavorita.length == 0) {
+      alert(`Opa! Você ainda não escolheu sua classe como favorita! Clique em um dos ícones para escolher uma e então tente clicar aqui novamente!`);
+      return
     }
+
+    // Enviando o valor da nova input
+    fetch("/registrarClasseFav", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        FavJobServer: FavJobUser,
+        id3Server: id3User
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          //   cardErro.style.display = "block";
+
+          //   mensagem_erro.innerHTML =
+          //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          resposta.json().then(json => {
+          sessionStorage.FK_CLASSE = FavJobUser;
+          setTimeout(() => {
+            alert(`Classe registrada com sucesso! Aproveite as músicas usando sua classe favorita!`);
+            window.location = "musica.html";
+          }, "500");
+        });
+          //   limparFormulario();
+          //   finalizarAguardar();
+        } else {
+          throw alert("Houve um erro ao tentar realizar o registro da sua classe!");
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
+  }
 
   /* Modal com Gallery/Slideshow */
   function openModal() {

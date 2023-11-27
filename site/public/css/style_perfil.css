@@ -1,0 +1,193 @@
+@font-face {
+    font-family: "FFont";
+    src: url("../OPTIEngeEtienne.otf");
+}
+
+* {
+    font-family: "FFont";
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../imagens/EW_left.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+/* Navbar */
+  
+.topnav {
+    overflow: hidden;
+    background-color:#252525;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    transform: skew(-20deg);
+  }
+
+  .topnav .logoFF {
+    transform: skew(0deg);
+    padding: 0;
+  }
+
+  .topnav a.nav-right {
+    float: right;
+  }
+  
+  .topnav a:hover {
+    background-color: #252525;
+    border-color: rgb(183,48,48);
+    border-style: double;
+    border-width: 5px;
+    border-top-width: 0;
+    color: rgb(183,48,48);
+    transition: color 0.5s;
+  }
+ 
+  .topnav a:hover:before, .card a:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+  
+  .topnav a.active {
+    border-color: rgb(183,48,48);
+    border-style: double;
+    border-width: 5px;
+    border-top-width: 0;
+  }
+  
+  .topnav .icon {
+    display: none;
+    transform: skew(0deg);
+  }
+
+  .topnav img {
+    height: 70px;
+    margin-right: 5px;
+    float: left;
+  }
+
+  .skewed {
+    transform: skew(20deg);
+  }
+
+  .sticky {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+  }
+
+  .logado {
+    display: none !important;
+  }
+
+  /* Responsividade */
+  
+  @media screen and (max-width: 712px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 712px) {
+    .topnav.responsive {position: fixed;}
+    .topnav.responsive .icon {
+      position: fixed;
+      right: 0;
+      top: 0;
+      border-width: 0px;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      margin-left: 70px;
+      border-color: rgb(183,48,48);
+      border-style: inset;
+      border-width: 5px;
+      border-top-width: 0px;
+      border-bottom-width: 0px;
+      transform: skew(0deg);
+      background-color: #252525;
+    }
+    .topnav.responsive a:hover {
+      color: rgb(183,48,48);
+      transition: color 0.5s;
+    }
+    .skewed {
+      transform: skew(0deg);
+    }
+    .topnav a.active {
+      border-bottom-width: 5px;
+    }
+  }
+
+  #chartBg {
+    position: absolute;
+    left: 0;
+    background-color: rgba(255,255,255,0.5);
+    height: 100%;
+    width: 50vw;
+  }
+
+  #myChart {
+    position: absolute;
+    left: 0;
+    top: 10vh;
+    max-width: 50vw;
+    max-height: 50vh;
+  }
+
+  #ClasseCount {
+    position: absolute;
+    left: 0;
+    top: 60vh;
+    max-width: 50vw;
+    max-height: 40vh;
+  }
+
+  .section_info_light {
+    color: black;
+    text-align:center;
+    padding:0px 80px;
+  }
+
+  .section_text_light {
+    text-align:center;
+    letter-spacing: 2.5px;
+    font-size: 3em;
+  }
+
+  .section_text_light .destaque_light {
+    text-shadow: 0px 5px 5px rgb(43, 146, 230);
+  }
+
+  #WoLPixel {
+    position: absolute;
+    right: 15vw;
+    top: 30vh;
+    max-width: 50vw;
+    max-height: 90vh;
+  }
+
+  #WoLPixel img {
+    height: 40vh;
+  }

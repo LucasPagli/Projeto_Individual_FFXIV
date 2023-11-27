@@ -85,3 +85,5 @@ constraint fkMusica foreign key (fkMusica)
 );
 
 select * from usuario_musica_contador;
+
+select vezesEscutada from usuario_musica_contador where fkMusica in (1,2,3,4,5,6) and fkUsuario = 10000;
