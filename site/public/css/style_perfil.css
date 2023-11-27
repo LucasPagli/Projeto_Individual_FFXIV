@@ -151,7 +151,7 @@ body {
   #myChart {
     position: absolute;
     left: 0;
-    top: 10vh;
+    top: 12.5vh;
     max-width: 50vw;
     max-height: 50vh;
   }
@@ -173,7 +173,7 @@ body {
   .section_text_light {
     text-align:center;
     letter-spacing: 2.5px;
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .section_text_light .destaque_light {
@@ -182,8 +182,8 @@ body {
 
   #WoLPixel {
     position: absolute;
-    right: 15vw;
-    top: 30vh;
+    right: 12.5vw;
+    top: 25vh;
     max-width: 50vw;
     max-height: 90vh;
   }
