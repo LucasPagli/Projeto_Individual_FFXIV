@@ -28,6 +28,7 @@ var loginModel = require("../models/loginModel");
                                          email: resultadoAutenticar[0].email,
                                          username: resultadoAutenticar[0].username,
                                          senha: resultadoAutenticar[0].senha,
+                                         fkClasse: resultadoAutenticar[0].fkClasse,
                                      });
                                  }
                              })

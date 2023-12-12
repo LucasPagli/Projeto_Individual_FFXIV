@@ -238,6 +238,7 @@ function logadoOrNot() {
                     sessionStorage.ID_USUARIO = json.idUsuario;
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.username;
+                    sessionStorage.FK_CLASSE = json.fkClasse;
                     // sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
@@ -249,6 +250,7 @@ function logadoOrNot() {
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
+                alert(`Email e/ou senha inválido(s)`);
 
                 resposta.text().then(texto => {
                     console.error(texto);

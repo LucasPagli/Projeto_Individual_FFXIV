@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Perfil</title>
 </head>
-<body onload="logadoOrNot(), obterDadosGraficoMusica(), obterDadosGraficoClasse(), WoLPixelArt()">
+<body onload="logadoOrNot(), FavoritouOrNot(), obterDadosGraficoMusica(), obterDadosGraficoClasse(), WoLPixelArt()">
 
     <div class="topnav sticky" id="myTopnav">
         <img src="imagens/FF_Logo.png" alt="Logo">
@@ -130,6 +130,15 @@ function WoLPixelArt() {
     }
 }
 
+function FavoritouOrNot() {
+    var ClasseWoL = sessionStorage.FK_CLASSE;
+
+    if (ClasseWoL == 'null') {
+        alert(`Opa! Você ainda não favoritou uma classe para seu Warrior of Light! Favorite ao menos uma classe no index para poder acessar o seu perfil corretamente!`)
+        window.location = "index.html";
+    } 
+}
+
 function logadoOrNot() {
     const loginNavbar = document.getElementById("navLogin");
     const cadastroNavbar = document.getElementById("navCadastro");
@@ -235,8 +244,12 @@ function logadoOrNot() {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
           console.log(resposta);
           resposta.forEach((usuario) => {
-            CountText.innerHTML = `${NomeWoL} sua classe favorita também é a favorita de <span class="destaque_light">${usuario.qtdClasse}</span> outro(s) Warriors of Light!`;
-            obterDadosClassesTotal();
+            if (Number(usuario.qtdClasse) - 1 == 0) {
+                CountText.innerHTML = `${NomeWoL} você é o único com essa classe favoritada dentre os usuários cadastrados!`;
+            } else {
+            CountText.innerHTML = `${NomeWoL} sua classe favorita também é a favorita de <span class="destaque_light">${Number(usuario.qtdClasse) - 1}</span> outro(s) Warriors of Light!`;
+        }
+        obterDadosClassesTotal();
           })
         });
       })

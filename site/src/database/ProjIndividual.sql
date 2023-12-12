@@ -9,6 +9,18 @@ email varchar(45),
 senha varchar(45)
 ) auto_increment = 10000;
 
+insert into usuario (username, email, senha) values
+	('Auriel', 'aurielaarin@outlook.com', 'Aarin@2112'),
+    ('Talos', 'talosxang@outlook.com', 'Talos@0410'),
+    ('Chinua', 'chinua@hotmail.com', 'Asche@2401'),
+    ('Shaba', 'shabadadu@gmail.com', 'Shaba@1234'),
+    ('Avri', 'avrikha@hotmail.com', 'Avri@2112'),
+    ('Shi', 'shirerus@outlook.com', 'Shi@0410'),
+    ('Freya', 'freyawhite@gmail.com', 'Freya@2401'),
+    ('Akane', 'akanelub@outlook.com', 'Akane@0410'),
+    ('Erdeni', 'erdenando@outlook.com', 'Erdeni@2112'),
+    ('Illya', 'illyablud@outlook.com', 'Illya@2401');
+
 select * from usuario;
 
 select count(fkClasse) as qtdClasse from usuario where fkClasse = 100;
